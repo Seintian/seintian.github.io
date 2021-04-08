@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+:root {
+    --shadow-color-after: #ff0000;
+    --shadow-color-before: #a30101;
+    --shadow-color-light: white;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    background: #ccc;
+    text-align: center;
+    color: #FFF;
+    font-size: 3em;
+}
+
+.spaziatura {
+    margin-top: 10%;
+    text-align: center; 
+    font-size: 60px
+}
+.active:hover {
+    color: rgb(105, 13, 13);
+    animation: neon-after 3s infinite;
+    cursor: default;
+
+} @keyframes neon-after {
+    0% {
+        text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 
+                      1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+                      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 
+                      0 0 20px var(--shadow-color-light), 0 0 30px var(--shadow-color-after), 
+                      0 0 40px var(--shadow-color-after), 0 0 50px var(--shadow-color-after), 
+                      0 0 70px var(--shadow-color-after), 0 0 100px var(--shadow-color-after), 
+                      0 0 200px var(--shadow-color-after);
+    }
+    50% {
+        text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 
+                      1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+                      0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 
+                      0 0 25px var(--shadow-color-light), 0 0 40px var(--shadow-color-after), 
+                      0 0 50px var(--shadow-color-after), 0 0 60px var(--shadow-color-after), 
+                      0 0 80px var(--shadow-color-after), 0 0 110px var(--shadow-color-after), 
+                      0 0 210px var(--shadow-color-after);
+    }
+    100% {
+        text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 
+                      1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+                      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 
+                      0 0 20px var(--shadow-color-light), 0 0 30px var(--shadow-color-after), 
+                      0 0 40px var(--shadow-color-after), 0 0 50px var(--shadow-color-after), 
+                      0 0 70px var(--shadow-color-after), 0 0 100px var(--shadow-color-after), 
+                      0 0 200px var(--shadow-color-after);
+    }
+}
+.active {
+    color: rgb(105, 13, 13);
+    animation: neon-before 3s infinite;
+    cursor: default;
+
+} @keyframes neon-before {
+    0% {
+        text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 
+                      1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+                      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 
+                      0 0 20px var(--shadow-color-light), 0 0 30px var(--shadow-color-before), 
+                      0 0 40px var(--shadow-color-before), 0 0 50px var(--shadow-color-before), 
+                      0 0 70px var(--shadow-color-before), 0 0 100px var(--shadow-color-before), 
+                      0 0 200px var(--shadow-color-before);
+    }
+    50% {
+        text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 
+                      1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+                      0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 
+                      0 0 25px var(--shadow-color-light), 0 0 40px var(--shadow-color-before), 
+                      0 0 50px var(--shadow-color-before), 0 0 60px var(--shadow-color-before), 
+                      0 0 80px var(--shadow-color-before), 0 0 110px var(--shadow-color-before), 
+                      0 0 210px var(--shadow-color-before);
+    }
+    100% {
+        text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 
+                      1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+                      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 
+                      0 0 20px var(--shadow-color-light), 0 0 30px var(--shadow-color-before), 
+                      0 0 40px var(--shadow-color-before), 0 0 50px var(--shadow-color-before), 
+                      0 0 70px var(--shadow-color-before), 0 0 100px var(--shadow-color-before), 
+                      0 0 200px var(--shadow-color-before);
+    }
+}

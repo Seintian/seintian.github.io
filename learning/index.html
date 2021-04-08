@@ -1,0 +1,79 @@
+<!-- commento be like: -->
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <title>Homepage di Christian Santarelli</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/main_style.css">
+    <script src="scripts/main_page.js"></script>
+</head>
+<body class="dark-mode">
+    <div class="topnav">
+        <a href="index.html" class="active">Home</a>
+        <div class="borded">
+            <a href="scnd_page.html">Seconda pagina</a>
+        </div>
+        <div class="borded">
+            <a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a>
+        </div>
+        <div class="borded">
+            <a href="scheda_autore.html">Scheda Autore</a>
+        </div>
+        <div class="borded">
+            <a href="tabella.html">Tabella</a>
+        </div>
+        
+        <div id="account">
+            <!-- 
+                account things 
+                work in progress
+            -->
+        </div>
+    </div>
+    <aside class="left" aria-label="introduzione">
+        <h1 title="Homepage">La mia homepage</h1>
+        <p>La mia prima pagina HTML a scuola<br>
+           -> <a href="https://www.curiepinerolo.edu.it/">Link alla scuola</a>
+        </p><br>
+        <p id="logged"></p>
+        <div>
+            <a href="https://code.visualstudio.com">
+                <img src="images/logo.jpg" alt="Logo VSCode">
+            </a>
+        </div>
+    </aside>
+    
+    <aside class="right" aria-label="canzoni">
+        <div>
+            <iframe width="300" height="300" allow="autoplay" download="true" title="Song: Fashion Weeks"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/328236265&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+        </div>
+        <div>
+            <iframe src="https://open.spotify.com/embed/track/7MiZjKawmXTsTNePyTfPyL" width="300"
+                    height="380" title = "Song: Devil Eyes" allow="encrypted-media"></iframe>
+        </div>
+    </aside>
+
+    <div class="center">
+        <div class="content">
+            <p>A sinistra puoi notare l'introduzione, qualche link, e il logo di Visual Studio Code, 
+            un ambiente di sviluppo con cui programmare in qualsiasi linguaggio di programmazione :-).<br>
+            A destra puoi notare due iframe di 
+            <a href="https://it.wikipedia.org/wiki/HTML#:~:text=In%20informatica%20l%27HyperText%20Markup,è%20un%20linguaggio%20di%20markup."
+               style="color: blueviolet;">
+                <span style="color: blueviolet;"><strong>HTML</strong></span>
+            </a>
+            che si collegano a Spotify per offrire, come loro servizio web,
+            un piccolo frammento di canzone per entrambi i titoli, con tanto di copertina dell'album - 
+            <em>figo</em>.<br>
+            Al centro della pagina dovrebbe esserci il contenuto vero e proprio della pagina -
+            "contenuto"... bah, si fa per dire ;-).
+            </p>
+            <p>Qui un tasto per cambiare il colore del sito -> <button onclick="darkMode()" id="button_mode">Toggle Dark Mode</button></p>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.dark-mode {
+    background-color: #444444;
+    color: #bebebe;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.light-mode {
+    background-color: #a5a5a5;
+    color: #000000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-section a {
+    float: left;
+    color: #bebebe;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 4px solid #302f2f;
+}
+.bottom-section a:hover {
+    background-color: #666666;
+    color: white;
+}
+
+img {
+    padding: 10px;
+    margin: 5px 16px 16px 0px;
+    border: 2px solid #302f2f;
+    float: left;
+}
+#Nikky_img {
+    float: right; 
+    margin-left: 16px; 
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(99, 88, 255)
+}
+
+div {
+    padding: 10px;
+}
