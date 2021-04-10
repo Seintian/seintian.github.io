@@ -35,9 +35,6 @@ aside {
     background-color: rgba(0, 0, 0, 0.507); /* rgb(170, 44, 44); */
     margin: 0 0 0 20px;
 }
-.center {
-    float: center;
-}
 
 img {
     padding: 10px;
