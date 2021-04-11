@@ -10,16 +10,21 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <link rel="stylesheet" href="lightbox2/dist/css/lightbox.css">
     <script src="lightbox2/dist/js/lightbox-plus-jquery.js"></script>
-    <script src="scripts/script.js"></script>
 
 </head>
 <body>
+    <div id="header" data-aos="fade-up">
+        <a href="images/notre_dame.jpg" data-lightbox="first_notre-dame" 
+            data-title="Cattedrale di Notre-Dame di Parigi">
+            <img src="images/notre_dame.jpg" alt="Notre Dame"   width="50%">
+        </a>
+    </div>
+
     <div class="contents">
-        <div id="header" data-aos="fade-up">
-            <a href="images/notre_dame.jpg" data-lightbox="first_notre-dame" 
-                data-title="Cattedrale di Notre-Dame di Parigi">
-                <img src="images/notre_dame.jpg" alt="Notre Dame"   width="50%">
-            </a>
+        <div id="navbar">
+            <a href="#gotico" id="nav_1">Gotico</a>
+            <a href="#gotico_spagnolo" id="nav_2">Gotico Spagnolo</a>
+            <a href="#cattedrale_Leòn" id="nav_3">Cattedrale di Leòn</a>
         </div>
     
         <header>
@@ -176,7 +181,13 @@
                     target="_blank">cattedrale di Segovia</a>.
             </div>
         </div>
+
+        <header>
+            <h1 id="cattedrale_Leòn">Cattedrale di Leòn</h1>
+        </header>
         
     </div>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
