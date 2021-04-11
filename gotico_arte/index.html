@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotico Spagnolo</title>
+    <link rel="stylesheet" href="styles/master.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="lightbox2/dist/css/lightbox.css">
+    <script src="lightbox2/dist/js/lightbox-plus-jquery.js"></script>
+    <script>
+        window.onload = (event) => { AOS.init(); }
+    </script>
+
+</head>
+<body>
+    <div id="header" data-aos="fade-up">
+        <a href="images/notre_dame.jpg" data-lightbox="first_notre-dame" 
+            data-title="Cattedrale di Notre-Dame di Parigi">
+            <img src="images/notre_dame.jpg" alt="Notre Dame" width="50%">
+        </a>
+    </div>
+
+    <h1>Gotico</h1>
+
+    <div id="main">
+        <div class="illustrations" data-aos="fade-right" data-aos-duration="2000">
+            <a href="images/chiesa1.jpg" data-lightbox="elementi_architettonici"
+                data-title="Gli elementi architettonici caratteristici del gotico">
+                <img src="images/chiesa1.jpg" alt="Gli elementi architettonici 
+                caratteristici del gotico" width="40%">
+            </a>
+            <a href="images/altri_elementi_architettonici.jpg" data-lightbox="elementi_architettonici"
+                data-title="Altri elementi architettonici caratteristici del gotico">
+                <img src="images/altri_elementi_architettonici.jpg" alt="Gli elementi
+                architettonici caratteristici del gotico" width="40%"
+                style="margin: 0 0 10% 5%">
+            </a>
+        </div>
+        <div class="content" data-aos="fade-left" data-aos-duration="600">
+            L'architettura gotica emerse intorno all'anno 1140 nell'Île-de-France come nuova 
+            ardita tecnica costruttiva: basata sullo sfruttamento di elementi architettonici 
+            del resto già noti (l'arco acuto e la volta a costoloni), ma coordinati allo 
+            scopo di dare una sempre maggiore elevazione e slancio verticale all'edificio 
+            (simbolo di sacralità). 
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="content" data-aos="fade-right" data-aos-duration="600" reversed>
+            Contenuto
+        </div>
+        <div class="illustrations" data-aos="fade-left" data-aos-duration="2000">
+            Illustrazioni
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="illustrations" data-aos="fade-right" data-aos-duration="2000">
+            Illustrazioni
+        </div>
+        <div class="content" data-aos="fade-left" data-aos-duration="600">
+            Contenuto
+        </div>
+    </div>
+    
+</body>
+</html>
