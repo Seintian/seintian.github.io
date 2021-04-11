@@ -15,6 +15,7 @@
         "pady",
         "popen",
         "popout",
+        "scnd",
         "scroller",
         "trigger"
     ]
