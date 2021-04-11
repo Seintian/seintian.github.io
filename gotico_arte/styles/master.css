@@ -58,3 +58,7 @@ a.no-link {
 a:link, a:visited, a:active {
     color: white;
 }
+
+hr {
+    margin: 3% 0;
+}
