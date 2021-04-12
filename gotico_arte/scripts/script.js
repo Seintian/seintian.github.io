@@ -62,6 +62,8 @@ function update_navbar() {
         siviglia_nav.classList.remove("bordered");
         leon_nav.classList.add("bordered");
         gotico_spagnolo_nav.classList.remove("bordered");
+        // bug fix
+        gotico_nav.classList.remove("bordered");
 
         leon_nav.onmouseover = function () {
             leon_nav.classList.add("hovered");
@@ -74,6 +76,8 @@ function update_navbar() {
         tarragona_nav.classList.remove("bordered");
         siviglia_nav.classList.add("bordered");
         leon_nav.classList.remove("bordered");
+        // bug fix
+        gotico_nav.classList.remove("bordered");
 
         siviglia_nav.onmouseover = function () {
             siviglia_nav.classList.add("hovered");
@@ -85,6 +89,8 @@ function update_navbar() {
     } else if (window.pageYOffset >= tarragona) {
         tarragona_nav.classList.add("bordered");
         siviglia_nav.classList.remove("bordered");
+        // bug fix
+        gotico_nav.classList.remove("bordered");
 
         tarragona_nav.onmouseover = function () {
             tarragona_nav.classList.add("hovered");
@@ -94,7 +100,7 @@ function update_navbar() {
         }
     }
 
-    /* Alternative, ~equivalent
+    /* Alternative, ~quite equivalent
     if (window.pageYOffset >= tarragona) {
         tarragona_nav.classList.add("bordered");
         siviglia_nav.classList.remove("bordered");
