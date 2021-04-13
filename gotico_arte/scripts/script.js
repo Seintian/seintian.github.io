@@ -21,8 +21,6 @@ var leon = document.getElementById("cattedrale_Leòn").offsetTop;
 var siviglia = document.getElementById("cattedrale_Siviglia").offsetTop;
 var tarragona = document.getElementById("cattedrale_Tarragona").offsetTop;
 
-// Add the sticky class to the navbar when you reach its scroll position. 
-// Remove "sticky" when you leave the scroll position
 function scroll_navbar() {
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky");
@@ -59,7 +57,7 @@ function update_navbar() {
         siviglia_nav.classList.remove("bordered");
         leon_nav.classList.add("bordered");
         gotico_spagnolo_nav.classList.remove("bordered");
-        // bug fix
+        
         gotico_nav.classList.remove("bordered");
 
         leon_nav.onmouseover = function () {
@@ -73,7 +71,7 @@ function update_navbar() {
         tarragona_nav.classList.remove("bordered");
         siviglia_nav.classList.add("bordered");
         leon_nav.classList.remove("bordered");
-        // bug fix
+        
         gotico_nav.classList.remove("bordered");
 
         siviglia_nav.onmouseover = function () {
@@ -86,7 +84,7 @@ function update_navbar() {
     } else if (window.pageYOffset >= tarragona) {
         tarragona_nav.classList.add("bordered");
         siviglia_nav.classList.remove("bordered");
-        // bug fix
+        
         gotico_nav.classList.remove("bordered");
 
         tarragona_nav.onmouseover = function () {
