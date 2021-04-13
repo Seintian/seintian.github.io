@@ -19,7 +19,7 @@ div#header img {
     display: block;
 }
 
-div.main {
+div.row {
     display: flex;
     clear: both;
     margin: 2%;
