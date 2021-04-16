@@ -1,3 +1,9 @@
+var span = document.getElementById("show_popup");
+
+function exitPopup() {
+    span.style.display = "none";
+}
+
 window.onload = (event) => {
     AOS.init();
 }
