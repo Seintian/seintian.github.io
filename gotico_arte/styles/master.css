@@ -33,13 +33,11 @@ div.illustrations {
 div.content {
     flex: 60%;
     padding: 5%;
-    /* background: linear-gradient(90deg, rgba(10,10,10,0.2) 0%, rgba(12,12,12,0.6) 50%, rgba(0,0,0,1) 100%); */
     background: linear-gradient(45deg, rgba(20,20,20,1) 0%, rgba(12,12,12,1) 50%, rgba(0,90,30,1) 100%);
 }
 div.content[reversed] {
     flex: 60%;
     padding: 5%;
-    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(12,12,12,0.6) 50%, rgba(10,10,10,0.2) 100%); */
     background: linear-gradient(45deg, rgba(0,90,30,1) 0%, rgba(12,12,12,1) 50%, rgba(20,20,20,1) 100%);
 }
 
@@ -94,14 +92,11 @@ hr {
     border-bottom: 4px solid rgb(0, 90, 30);
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
 }
-/* Add some top padding to the page content to prevent sudden quick movement 
-(as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
     padding-top: 60px;
 }
