@@ -173,13 +173,13 @@ footer div.links {
     padding: 8px 0;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    bottom: 115%;
     left: 50%;
     margin-left: -80px;
 }
 .popup .popuptext .exit_popup {
     position: absolute;
-    top: 5px;
+    top: 3px;
     right: 5px;
     cursor: pointer;
 }
