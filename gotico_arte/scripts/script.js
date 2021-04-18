@@ -11,7 +11,7 @@ window.onload = (event) => {
 window.onscroll = function() {
     scroll_navbar();
     update_navbar();
-};
+}
 
 var navbar = document.getElementById("navbar");
 var gotico_nav = document.getElementById("nav_1");
