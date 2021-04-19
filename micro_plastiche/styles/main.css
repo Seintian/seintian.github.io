@@ -1,12 +1,12 @@
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (min-width: 1000px) {
     html, body {
         margin: 0;
         padding: 0;
         background-color: white;
         color: black;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-        font-weight: 1.5em;
+        font-size: 1rem;
         max-width: 100%;
         overflow-x: hidden;
         position: relative;
@@ -44,17 +44,17 @@
     }
     article div.images img#prima_img {
         margin-left: 6.15vw;
-        margin-top: -21%;
+        margin-top: -35vh;
     }
 }
-@media only screen and (orientation: portrait) {
+@media only screen and (orientation: portrait) and (max-width: 720) {
     html, body {
         margin: 0;
         padding: 0;
         background-color: white;
         color: black;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-        font-weight: 1em;
+        font-size: .5em;
         max-width: 100%;
         overflow-x: hidden;
         position: relative;
