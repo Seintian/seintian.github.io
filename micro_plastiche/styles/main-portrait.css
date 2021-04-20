@@ -14,6 +14,12 @@ html, body {
 * {
     box-sizing: border-box;
 }
+a:link, a:visited, a:active {
+    color: white;
+}
+a:hover {
+    color: rgb(180, 170, 170);
+}
 
 header {
     background-color: grey;
@@ -37,9 +43,14 @@ article div.images {
     background: linear-gradient(90deg, rgba(255,255,255,0) 40%, rgba(15,15,15,1) 40%, rgba(45,45,45,1) 100%);
 }
 article div.images img#img_1 {
+    display: block;
     width: 80%;
-    margin-left: 4.75vw;
-    margin-top: -5%;
+    margin-left: 5%;
+}
+article div.images img#img_2 {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
 }
 
 section#row {
@@ -56,13 +67,16 @@ section div.col-1 {
 section div.col-2 {
     flex: 40%;
     padding: 20px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 40%, rgba(15,15,15,1) 40%, rgba(45,45,45,1) 100%);
 }
-section div.col-2 img#img_2 {
-    
+section div.col-2 img#img_3 {
+    width: 100%;
 }
 section div.col-3 {
     flex: 30%;
+    color: white;
     padding: 20px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 40%, rgba(15,15,15,1) 40%, rgba(45,45,45,1) 100%);
 }
 section#row {
     flex-direction: column;
