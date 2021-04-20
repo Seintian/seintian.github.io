@@ -52,6 +52,31 @@ article div.images img#img_2 {
     width: 80%;
     margin: 0 auto;
 }
+article div.contents-reversed {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 40%, rgba(15, 15, 15, 1) 40%, 
+                                rgba(45, 45, 45, 1) 100%);
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
+article div.contents-reversed ol {
+    list-style-type: decimal-leading-zero;
+}
+article div.contents-reversed h1 {
+    font-size: 2em;
+    margin: 0 0 3% 0;
+    text-align: center;
+}
+article div.hr-separator {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 40%, rgba(15, 15, 15, 1) 40%, 
+                                rgba(45, 45, 45, 1) 100%);
+    padding: 3% 20px;
+}
+article div.hr-separator hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #ccc 0%, #333 40%, #ccc 100%);
+}
 
 section#row {
     display: flex;
