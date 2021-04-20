@@ -6,6 +6,7 @@
         "bxos",
         "clermont",
         "compostela",
+        "dell'asciugatrice",
         "dormizione",
         "ferrand",
         "fram",
@@ -13,13 +14,16 @@
         "giralda",
         "kargs",
         "kutubia",
+        "l'asciugatrice",
         "l'except",
         "le",
         "lightbox",
         "microplastica",
         "microplastiche",
+        "microsfere",
         "naranjos",
         "nell'",
+        "nell'asciugatrice",
         "nell'île",
         "padx",
         "pady",
@@ -30,7 +34,11 @@
         "scnd",
         "scroller",
         "seintian",
+        "stendino",
         "topnav",
         "trigger"
+    ],
+    "cSpell.words": [
+        "asciugatrice"
     ]
 }

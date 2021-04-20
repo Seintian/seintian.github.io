@@ -9,16 +9,17 @@ html, body {
     overflow-x: hidden;
     position: relative;
     scroll-behavior: smooth;
-    background: linear-gradient(90deg, rgb(45, 45, 45) 0%, rgba(15,15,15,1) 40%, rgba(255,255,255,1) 40%);
+    background: linear-gradient(90deg, rgb(45, 45, 45) 0%, rgba(15, 15, 15 ,1) 40%, 
+                                rgba(255, 255, 255, 1) 40%);
 }
 * {
     box-sizing: border-box;
 }
 a:link, a:visited, a:active {
-    color: white;
+    color: black;
 }
 a:hover {
-    color: rgb(180, 170, 170);
+    color: rgb(50, 50, 50);
 }
 
 header {
@@ -40,7 +41,8 @@ article div.contents {
     padding: 3%;
     padding-left: 4vw;
     width: 60vw;
-    background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(135,135,135,0.5) 33%, rgba(0, 0, 0, .4) 67%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, .5) 0%, rgba(135, 135, 135, .5) 33%, 
+                                rgba(0, 0, 0, .4) 67%);
 }
 article div.images {
     display: block;
@@ -57,6 +59,34 @@ article div.images img#img_2 {
     margin-top: -80vh;
     margin-bottom: 10vh;
 }
+article div.contents-reversed {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 40%, rgba(15, 15, 15, 1) 40%, 
+                                rgba(45, 45, 45, 1) 100%);
+    color: white;
+    padding: 0 20px 20px 20px;
+    width: 100%;
+}
+article div.contents-reversed ol {
+    list-style-type: decimal-leading-zero;
+}
+article div.contents-reversed h1 {
+    font-size: 2em;
+    margin: 0 0 3% 0;
+    text-align: center;
+}
+article div.contents-reversed div.centered {
+    margin: 0 20%;
+}
+article div.hr-separator {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 40%, rgba(15, 15, 15, 1) 40%, 
+                                rgba(45, 45, 45, 1) 100%);
+    padding: 3% 20px;
+}
+article div.hr-separator hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #ccc, #333, #ccc);
+}
 
 section.row {
     margin-top: 6%;
@@ -64,7 +94,12 @@ section.row {
     flex-wrap: wrap;
     flex-direction: row;
     overflow: auto;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(135,135,135,0) 33%, rgba(0, 0, 0, .3) 67%);
+
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(135, 135, 135, 0) 33%, rgba(0, 0, 0, .3) 67%);
+    /*
+    background: linear-gradient(90deg, rgba(45,45,45,1) 0%, rgba(15,15,15,1) 40%, 
+                                rgba(15,15,15,1) 40%, rgba(15,15,15,0.3) 100%)
+    */
 }
 section div.col-1 {
     flex: 30%;
