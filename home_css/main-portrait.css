@@ -20,14 +20,14 @@ html, body {
     left: 2.5%;
     background-color: rgba(30, 30, 30, 0.9);
     padding: 5px;
-    height: 75%;
+    height: 80%;
     width: 5%;
     text-align: center;
     cursor: pointer;
 }
 .horizontal-nav #nav-left-button span {
     position: absolute;
-    top: 25%;
+    top: 33%;
     left: 35%;
 
     color: white;
@@ -40,14 +40,14 @@ html, body {
     right: 2.5%;
     background-color: rgba(30, 30, 30, 0.9);
     padding: 5px;
-    height: 75%;
+    height: 80%;
     width: 5%;
     text-align: center;
     cursor: pointer;
 }
 .horizontal-nav #nav-right-button span {
     position: absolute;
-    top: 25%;
+    top: 33%;
     right: 35%;
 
     color: white;
@@ -78,7 +78,8 @@ nav a:link {
     text-decoration: none;
     font-size: 17px;
     border-bottom: 4px solid #161616;
-    margin: 0 5px;
+    margin: 5px;
+    border-radius: 4px;
 }
 nav a:visited {
     color: black;
