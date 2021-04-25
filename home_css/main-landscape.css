@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", "sans-serif";
+}
+
+.horizontal-nav #nav-left-button {
+    display: none;
+}
+.horizontal-nav #nav-right-button {
+    display: none;
+}
+.horizontal-nav nav.nav-container {
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+
+    max-width: 99%;
+    margin: 0.5rem auto;
+    background-color: #279b27;
+}
+.horizontal-nav .nav-item {
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+nav a:link {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 4px solid #161616;
+    margin: 0 5px;
+}
+nav a:visited {
+    color: black;
+    border-bottom: 4px solid #161616;
+}
+nav a:hover {
+    background-color: #2c2c2c;
+    color: white;
+    border-bottom: 4px solid #161616;
+}
