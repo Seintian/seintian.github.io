@@ -17,6 +17,7 @@ html, body {
     margin: 0.5rem auto;
     background-color: #279b27;
     box-shadow: 0 1px 5px;
+    padding: 5px;
 }
 .horizontal-nav .nav-item {
     flex: 0 0 auto;
@@ -32,12 +33,14 @@ nav a:link {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    border: 1px solid #161616;
     border-bottom: 4px solid #161616;
     margin: 5px;
     border-radius: 4px;
 }
 nav a:visited {
     color: black;
+    border: 1px solid #161616;
     border-bottom: 4px solid #161616;
 }
 nav a:hover {
