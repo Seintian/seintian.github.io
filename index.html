@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
+    <meta name="description" content="The main page of the site I use for school and self-thought learning." />
+    <meta name="title" content="Site Homepage" />
+    <title>Site Homepage</title>
     <!-- CSS styles for pcs -->
     <link rel="stylesheet" href="home_css/main-landscape.css" media="screen and (orientation: landscape)" />
     <!-- CSS styles for mobile devices -->
     <link rel="stylesheet" href="home_css/main-portrait.css" media="screen and (orientation: portrait)" />
     <script src="long-press-event-master/dist/long-press-event.min.js"></script>
+    <script src="JQuery/jquery.min.js"></script>
 </head>
 <body>
     <div class="horizontal-nav">
@@ -17,9 +20,9 @@
             <span><</span>
         </div>
         <nav class="nav-container" id="nav-container">
-            <a href="learning/" class="nav-item">Learning HTML</a>
-            <a href="gotico_arte/" class="nav-item">Gothics Art Work</a>
-            <a href="micro_plastiche/" class="nav-item">Microplastics Science Work</a>
+            <a href="#learning" class="nav-item">Learning HTML</a>
+            <a href="#gothics" class="nav-item">Gothics Art Work</a>
+            <a href="#micro_plastics" class="nav-item">Microplastics Science Work</a>
             
         </nav>
         <div id="nav-right-button">
@@ -27,7 +30,68 @@
         </div>
     </div>
 
-    
+    <article>
+        <div class="content">
+            <header>
+                <h1 id="learning">Learning</h1>
+            </header>
+            <div class="desc">
+                <a href="learning/" class="img-link">
+                    <div class="preview-page">
+                        <img src="home_img/learning_preview.png" alt="Learning Preview" />
+                        <div class="site-metas">
+                            <h2 class="site-title" id="learning-title">Learning HTML</h2>
+                            <p class="site-desc" id="learning-desc">A site with...</p>
+                        </div>
+                        <span class="lang-preview">(Italian)</span>
+                    </div>
+                </a>
+                <p>
+                    <a href="learning/">Here </a>
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <header>
+                <h1 id="gothics">Gothics</h1>
+            </header>
+            <div class="desc">
+                <a href="gotico_arte/" class="img-link">
+                    <div class="preview-page">
+                        <img src="home_img/gothics_preview.png" alt="Gothics Preview" />
+                        <div class="site-metas">
+                            <h2 class="site-title" id="gothics-title">Gothics Page</h2>
+                            <p class="site-desc" id="gothics-desc">A site with...</p>
+                        </div>
+                        <span class="lang-preview">(Italian)</span>
+                    </div>
+                </a>
+                <p>
+                    <a href="gotico_arte/">Here </a>
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <header>
+                <h1 id="micro_plastics">Microplastics</h1>
+            </header>
+            <div class="desc">
+                <a href="micro_plastiche/" class="img-link">
+                    <div class="preview-page">
+                        <img src="home_img/microplastics_preview.png" alt="Microplastics Preview" />
+                        <div class="site-metas">
+                            <h2 class="site-title" id="microplastics-title">Microplastiche Page</h2>
+                            <p class="site-desc" id="microplastics-desc">A site with...</p>
+                        </div>
+                        <span class="lang-preview">(Italian)</span>
+                    </div>
+                </a>
+                <p>
+                    <a href="micro_plastiche/">Here </a>
+                </p>
+            </div>
+        </div>
+    </article>
 
     <script src="home_js/script.js"></script>
 </body>

@@ -1,8 +1,3 @@
-/* var width = document.getElementById('myID').offsetWidth;    //includes margin, border, padding
-var height = document.getElementById('nav-container').offsetHeight;
-document.querySelector(":root").style.setProperty("--nav-container-height", height); */
-
-
 var sLeft = document.getElementById('nav-container').scrollLeft;
 
 // scroll the topnav as long the buttons are pressed
@@ -24,4 +19,53 @@ leftBtn.onmousedown = function () {
 }
 leftBtn.onmouseup = function () {
     clearInterval(_timeout);
+}
+
+loadSiteMetas();
+
+function loadSiteMetas() {
+    $("#learning-title").load("learning/ meta[name='title']", function(response, status, xhr) {
+        var $meta = $("meta", this);
+    
+        $(this).text($meta.attr("content"));
+    
+        $meta.remove();
+    });
+    $("#learning-desc").load("learning/ meta[name='description']", function(response, status, xhr) {
+        var $meta = $("meta", this);
+    
+        $(this).text($meta.attr("content"));
+    
+        $meta.remove();
+    });
+
+    $("#gothics-title").load("gotico_arte/ meta[name='title']", function(response, status, xhr) {
+        var $meta = $("meta", this);
+    
+        $(this).text($meta.attr("content"));
+    
+        $meta.remove();
+    });
+    $("#gothics-desc").load("gotico_arte/ meta[name='description']", function(response, status, xhr) {
+        var $meta = $("meta", this);
+    
+        $(this).text($meta.attr("content"));
+    
+        $meta.remove();
+    });
+
+    $("#microplastics-title").load("micro_plastiche/ meta[name='title']", function(response, status, xhr) {
+        var $meta = $("meta", this);
+    
+        $(this).text($meta.attr("content"));
+    
+        $meta.remove();
+    });
+    $("#microplastics-desc").load("micro_plastiche/ meta[name='description']", function(response, status, xhr) {
+        var $meta = $("meta", this);
+    
+        $(this).text($meta.attr("content"));
+    
+        $meta.remove();
+    });
 }

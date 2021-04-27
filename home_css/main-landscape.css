@@ -3,8 +3,17 @@ html, body {
     padding: 0;
     font-family: "Lato", "sans-serif";
     background: #999;
+    scroll-behavior: smooth;
 }
 
+/* Topbar CSS */
+.horizontal-nav {
+    position: fixed;
+    top: 0;
+    left: 0.5%;
+    width: 99%;
+    z-index: 2;
+}
 .horizontal-nav #nav-left-button, .horizontal-nav #nav-right-button {
     display: none;
 }
@@ -24,27 +33,64 @@ html, body {
     padding: 8px 10px;
     margin-right: 1rem;
     text-decoration: none;
-    color: #fff;
-}
-nav a:link {
-    float: left;
     color: black;
+    float: left;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    border: 1px solid #161616;
     border-bottom: 4px solid #161616;
     margin: 5px;
-    border-radius: 4px;
+    box-shadow: 1px 1px black;
+    transition: .3s;
 }
-nav a:visited {
-    color: black;
-    border: 1px solid #161616;
-    border-bottom: 4px solid #161616;
-}
-nav a:hover {
+.horizontal-nav .nav-item:hover {
     background-color: #2c2c2c;
     color: white;
     border-bottom: 4px solid #161616;
+}
+
+/* Article CSS */
+article {
+    width: 80%;
+    margin: 5% auto;
+    margin-top: 10%;
+}
+article div.content {
+    padding: 2% 2%;
+    background: grey;
+    box-shadow: 10px 10px rgb(70, 70, 70);
+    margin: 5%;
+}
+article a:link, article a:visited, article a:active {
+    color: #175a17;
+}
+article a:hover {
+    color: #218021;
+}
+article a.header-link {
+    transition: .3s;
+    color: black;
+}
+article a.header-link:hover {
+    color: #218021;
+}
+
+article div.preview-page {
+    padding-left: 5%;
+    border-left: 6px solid #208828;
+    border-radius: 6px;
+    display: flex;
+    position: relative;
+    transition: .3s;
+}
+article div.preview-page img {
+    width: 50%;
+    /* transform: scale(0.5) translate(-40%, -40%); */
+    user-select: none;
+}
+article div.preview-page div.site-metas {
+    flex: 1;
+    padding: 0 5%;
+    color: black;
 }

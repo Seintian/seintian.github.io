@@ -2,6 +2,7 @@
     "cSpell.ignoreWords": [
         "almohadi",
         "anassimandro",
+        "backroll",
         "bahnschrift",
         "bxos",
         "clermont",
@@ -14,6 +15,7 @@
         "getsizeof",
         "giralda",
         "kargs",
+        "kiteboarding",
         "kutubia",
         "l'asciugatrice",
         "l'except",
@@ -21,6 +23,7 @@
         "lightbox",
         "longpress",
         "longtarget",
+        "metas",
         "microplastica",
         "microplastiche",
         "microplastics",
@@ -39,10 +42,14 @@
         "scnd",
         "scroller",
         "seintian",
+        "sessio",
         "stendino",
+        "topbar",
         "topnav",
         "touchleave",
-        "trigger"
+        "trigger",
+        "vlog",
+        "youtube"
     ],
     "cSpell.words": [
         "asciugatrice"
