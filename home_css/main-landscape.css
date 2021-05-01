@@ -86,7 +86,6 @@ article div.preview-page {
 }
 article div.preview-page img {
     width: 50%;
-    /* transform: scale(0.5) translate(-40%, -40%); */
     user-select: none;
 }
 article div.preview-page div.site-metas {
