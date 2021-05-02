@@ -1,0 +1,17 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", "sans-serif";
+    scroll-behavior: smooth;
+}
+
+body.dark-mode {
+    background: #121212;
+}
+body.light-mode {
+    background: #e4e4e4;
+}
+
+nav div#toggle-dark-mode img {
+    cursor: pointer;
+}
