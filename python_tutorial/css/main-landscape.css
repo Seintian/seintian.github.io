@@ -1,3 +1,4 @@
+/* default styles for pages, to avoid browser own css (margin, padding) */
 html, body {
     margin: 0;
     padding: 0;
@@ -5,13 +6,111 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* different styles every mode */
 body.dark-mode {
     background: #121212;
+    color: rgb(200, 200, 200);
+}
+body.dark-mode a:link, body.dark-mode a:visited {
+    color: rgb(25, 160, 75);
 }
 body.light-mode {
     background: #e4e4e4;
+    color: rgb(50, 50, 50);
+}
+body.light-mode a:link, body.light-mode a:visited {
+    color: rgb(16, 100, 47);
+}
+body.light-mode a:hover {
+    color: rgb(25, 160, 75);
 }
 
+/* TOP BAR STYLES */
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+nav.dark-mode {
+    background: #333;
+}
+nav.light-mode {
+    background: #999;
+}
+nav div {
+    display: inline-block;
+    margin: .5rem;
+}
+nav div#menu-button {
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    width: 70%;
+    user-select: none;
+}
+nav div#toggle-dark-mode {
+    float: right;
+}
 nav div#toggle-dark-mode img {
     cursor: pointer;
 }
+nav div#toggle-dark-mode img:hover:active {
+    background: #555555;
+}
+nav div#menu-button {
+    width: 7.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+nav div#menu-button:hover:active {
+    background: #555555;
+}
+
+/* ARTICLE STYLES */
+div.row {
+    display: flex;
+    padding-top: 3em;
+}
+aside#menu {
+    flex: initial;
+    width: 250px;
+    min-width: 200px;
+    margin: 0;
+    font-size: 1rem;
+    height: 100%;
+    padding: 1rem;
+}
+nav.dark-mode + aside#menu {
+    background: #333;
+}
+nav.light-mode + aside#menu {
+    background: #999;
+}
+article {
+    flex: 1;
+}
+aside#menu h2 {
+    margin: .7rem .5rem;
+}
+aside#menu a {
+    display: block;
+    margin: .5rem;
+}
+
+/* CONTENTS, CODEBLOCKS AND DEFINITIONS */
+article div.content {
+    margin: 2rem;
+}
+code {
+    width: 500px;
+    min-width: 300px;
+    transition: .5s;
+    background: #222;
+    color: rgb(200, 200, 200);
+}
+/*
+body.light-mode code {
+    background: #e4e4e4;
+    color: rgb(50, 50, 50);
+}
+*/
