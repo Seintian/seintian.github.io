@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Learn Python">
-    <meta name="description" content="A Python tutorial with definition, usage examples, hints...">
+    <meta name="title" property="og:title" content="Learn Python">
+    <meta name="description" property="og:description" content="A Python tutorial with definition, usage examples, hints...">
     <title>Learn Python</title>
     <link rel="stylesheet" href="css/main-landscape.css" type="text/css" media="screen and (orientation: landscape)">
     <link rel="stylesheet" href="css/main-portrait.css" type="text/css" media="screen and (orientation: portrait)">    
@@ -25,9 +25,11 @@
     </nav>
     <div class="row">
         <aside id="menu" style="display: block">
-            <h2>Variabili</h2>
-            <a href="#variables">Tipi di variabili</a>
-            <a href="#var_scopes">Variable Scopes</a>
+            <div class="sticky">
+                <h2>Variabili</h2>
+                <a href="#variables">Tipi di variabili</a>
+                <a href="#var_scopes">Variable Scopes</a>
+            </div>
         </aside>
         <article id="content">
             <div id="variables" class="content">
@@ -77,12 +79,35 @@
                         <li>Nativo di Python: list <br>
                             Una lista è un insieme di elementi di <b>qualsiasi</b> tipo, e
                             quando bisogna riferirsene bisogna utilizzare le parentesi quadre all'inizio
-                            e alla fine.
+                            e alla fine. <br>
+
+                            NB: per accedere direttamente ad un singolo elemento della lista bisogna 
+                            richiamarlo col suo indice, come è scritto nella penultima riga.
+                            <pre>
+                                <code class="lang-python">
+    myList = [1, "2", [3, 4]]
+    for element in myList:
+        print(element)
+    >>> 1
+    >>> "2"
+    >>> [3, 4]
+    print(myList[1])
+    >>> "2"
+                                </code>
+                            </pre>
 
                         </li>
                         <li>Nativo di Python: tuple <br>
                             Una tupla è come una lista ma le parentesi sono tonde e i suoi elementi sono
-                            <b>immutabili</b> e <b>fissi</b> in numero. Sono poco utilizzate.
+                            <b>immutabili</b> e <b>fissi</b> in numero.
+
+                            <pre>
+                                <code class="lang-python">
+    myTuple = (1, 0.5, "elemento")
+    myTuple[2] = 5 // questa riga darà errore
+    >>> TypeError: 'tuple' object does not support item assignment
+                                </code>
+                            </pre>
 
                         </li>
                         <li>Nativo di Python: dict <br>
@@ -92,8 +117,54 @@
                             'dizionario[chiave] = valore', dove la chiave è solitamente una stringa
                             che identifica il valore, e il valore può essere di qualsiasi tipo.
 
+                            <pre>
+                                <code class="lang-python">
+    myDict = {"name": "Mario", "surname": "Rossi", "age": 20}
+    print(myDict[name], myDict[surname])
+    >>> Mario Rossi
+                                </code>
+                            </pre>
+
                         </li>
                     </ol>
+                    Infine, ci sono anche altre strutture dati utilizzabili in Python, grazie
+                    alla fiorente community di programmatori che lavorano regolarmente offrendo 
+                    nuovi moduli e nuove librerie agli utenti che scrivono in questo linguaggio 
+                    (queue, stack, ...).
+                </p>
+            </div>
+            <div id="var_scopes" class="content">
+                <h1>Variabili globali e locali</h1>
+                <p>
+                    In Python, come in altri linguaggi di programmazione, le variabili hanno uno "scope",
+                    cioè possono essere globali o locali.
+                    <ul>
+                        <li>Le variabili globali sono accessibili da ogni parte del codice
+
+                            <pre>
+                                <code class="lang-python">
+    var = 5
+    def function():
+        print(var) // dichiarata al di fuori della funzione, ma essendo globale sarà accessibile
+    function()
+    >>> 5
+
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Le variabili locali, invece, sono accessibili solo nella funzione o classe 
+                            in questione.
+
+                            <pre>
+                                <code class="lang-python">
+    def function():
+        var = 20
+    print(var) // la funzione print non riuscirà a trovare nessuna variabile con quel nome
+    >>> NameError: name 'var' is not defined
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
                 </p>
             </div>
         </article>

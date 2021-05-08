@@ -89,6 +89,9 @@ nav.light-mode + aside#menu {
 article {
     flex: 1;
 }
+aside#menu div.sticky {
+    position: fixed;
+}
 aside#menu h2 {
     margin: .7rem .5rem;
 }
@@ -108,9 +111,10 @@ code {
     background: #222;
     color: rgb(200, 200, 200);
 }
-/*
 body.light-mode code {
     background: #e4e4e4;
     color: rgb(50, 50, 50);
 }
-*/
+body.light-mode code span.hljs-number {
+    color: #4dc000;
+}
