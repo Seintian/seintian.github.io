@@ -41,6 +41,21 @@ nav div {
     display: inline-block;
     margin: .5rem;
 }
+nav div#home {
+    float: right;
+    margin: 0;
+    margin-right: 45%;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+}
+nav div#home a {
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: 2rem;
+    line-height: 1;
+}
+body.light-mode nav div#home a { color:rgb(50, 50, 50) }
+body.dark-mode nav div#home a { color: rgb(200, 200, 200) }
 nav div#menu-button {
     font-size: 2rem;
     cursor: pointer;
@@ -50,6 +65,7 @@ nav div#menu-button {
 }
 nav div#toggle-dark-mode {
     float: right;
+    margin-bottom: 0;
 }
 nav div#toggle-dark-mode img {
     cursor: pointer;

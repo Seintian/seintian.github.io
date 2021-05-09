@@ -1,0 +1,23 @@
+table, th, td {
+    border: 2px solid #bebebe;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+th {
+    background-color: black;
+}
+table {
+    border-spacing: 5px;
+}
+tr:nth-child(even) {
+    background-color: rgb(100, 100, 100);
+}
+tr:nth-child(odd) {
+    background-color: rgb(49, 49, 49);
+}
+
+body.light-mode th, body.light-mode td {
+    color: rgb(200, 200, 200)
+}

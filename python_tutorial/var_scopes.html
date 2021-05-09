@@ -36,8 +36,39 @@
             </div>
         </aside>
         <article id="content">
-            <div class="content">
-                
+            <div id="var_scopes" class="content">
+                <h1>Variabili globali e locali</h1>
+                <p>
+                    In Python, come in altri linguaggi di programmazione, le variabili hanno uno "scope",
+                    cioè possono essere globali o locali.
+                    <ul>
+                        <li>Le variabili globali sono accessibili da ogni parte del codice
+            
+                            <pre>
+                                <code class="lang-python">
+    var = 5
+    def function():
+        print(var) // dichiarata al di fuori della funzione, ma essendo globale sarà accessibile
+    function()
+    >>> 5
+            
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Le variabili locali, invece, sono accessibili solo nella funzione o classe 
+                            in questione.
+            
+                            <pre>
+                                <code class="lang-python">
+    def function():
+        var = 20
+    print(var) // la funzione print non riuscirà a trovare nessuna variabile con quel nome
+    >>> NameError: name 'var' is not defined
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
+                </p>
             </div>
         </article>
     </div>
