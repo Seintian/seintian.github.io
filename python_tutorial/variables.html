@@ -9,7 +9,8 @@
     <title>Learn Python</title>
     <link rel="stylesheet" href="css/main-landscape.css" type="text/css" media="screen and (orientation: landscape)">
     <link rel="stylesheet" href="css/main-portrait.css" type="text/css" media="screen and (orientation: portrait)">    
-    <link rel="stylesheet" href="css/tabella.css">
+    <link rel="stylesheet" href="css/tabella-landscape.css" type="text/css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="css/tabella-portrait.css" type="text/css" media="screen and (orientation: portrait)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../highlight/styles/vs2015.css">
     <script src="../highlight/highlight.pack.js"></script>
@@ -29,7 +30,7 @@
         </div>
     </nav>
     <div class="row">
-        <aside id="menu" style="display: block">
+        <aside id="menu">
             <div class="sticky">
                 <h2>Variabili</h2>
                 <a href="variables.html">Tipi di variabili</a>
@@ -145,33 +146,27 @@
                                 <th scope="col">Nome</th>
                                 <th scope="col">N° elementi fisso</th>
                                 <th scope="col">Tipi di variabili ammessi</th>
-                                <th scope="col">Metodo di indicizzazione</th>
+                                <th scope="col">Metodo di richiamo elemento</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Lista</td>
-                                <td>Numero potenzialmente infinito di elementi</td>
+                                <td>Numero infinito di elementi</td>
                                 <td>Tutti, anche strutture dati stesse</td>
-                                <td>
-                                    lista[indice]
-                                </td>
+                                <td>list[indice]</td>
                             </tr>
                             <tr>
                                 <td>Tupla</td>
                                 <td>Numero definito di elementi</td>
                                 <td>Tutti, anche strutture dati stesse</td>
-                                <td>
-                                    tupla[indice]
-                                </td>
+                                <td>tuple[indice]</td>
                             </tr>
                             <tr>
                                 <td>Dizionario</td>
-                                <td>Numero potenzialmente infinito di elementi (coppie)</td>
+                                <td>Numero infinito di elementi (coppie)</td>
                                 <td>Tutti, anche strutture dati stesse, basta che siano organizzati a coppie</td>
-                                <td>
-                                    dizionario[chiave]
-                                </td>
+                                <td>dict[chiave]</td>
                             </tr>
                         </tbody>
                     </table>
