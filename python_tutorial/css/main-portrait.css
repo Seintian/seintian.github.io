@@ -100,7 +100,7 @@ aside#menu {
 }
 article {
     flex: 1;
-    margin-left: 10%;
+    margin-left: 7%;
 }
 aside#menu div.sticky {
     position: fixed;
