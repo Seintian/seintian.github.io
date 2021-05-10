@@ -86,7 +86,7 @@ nav div#menu-button:hover:active {
 /* ARTICLE STYLES */
 div.row {
     display: flex;
-    padding-top: 3em;
+    padding-top: 2.8rem;
 }
 aside#menu {
     display: none;
