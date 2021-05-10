@@ -52,13 +52,13 @@ nav div#home {
 nav div#home a {
     text-decoration: none;
     vertical-align: middle;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1;
 }
 body.light-mode nav div#home a { color:rgb(50, 50, 50) }
 body.dark-mode nav div#home a { color: rgb(200, 200, 200) }
 nav div#menu-button {
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     line-height: 1;
     width: 70%;
