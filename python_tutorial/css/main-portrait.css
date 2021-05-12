@@ -157,7 +157,7 @@ article div.content {
     width: 65%;
 }
 code {
-    width: 100%;
+    width: 300px;
     background: #222;
     color: rgb(200, 200, 200);
 }
