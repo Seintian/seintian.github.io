@@ -1,0 +1,28 @@
+/* CONTENTS, CODEBLOCKS AND DEFINITIONS */
+article div.content {
+    margin: 2rem 0;
+    width: 65%;
+}
+code {
+    width: 300px;
+    background: #222;
+    color: rgb(200, 200, 200);
+}
+body.light-mode code {
+    background: rgb(220, 220, 220);
+    color: rgb(50, 50, 50);
+    border-left: 4px solid green;
+    border-radius: 4px;
+}
+body.light-mode code span.hljs-number {
+    color: #337e01;
+}
+body.light-mode code span.hljs-string {
+    color: #997160;
+}
+body.light-mode code span.hljs-keyword {
+    color: #345c7c;
+}
+body.light-mode code span.hljs-built_in {
+    color: #3e9e8b;
+}
