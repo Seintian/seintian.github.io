@@ -4,7 +4,6 @@ table#tabella {
 }
 table, th, td {
     border-collapse: collapse;
-    max-width: 90px;
     text-align: center;
 }
 body.dark-mode table, body.dark-mode th, body.dark-mode td {
@@ -26,6 +25,7 @@ body.light-mode th {
 }
 table {
     border-spacing: 5px;
+    width: 50%;
 }
 
 body.dark-mode tr:nth-child(even) {
