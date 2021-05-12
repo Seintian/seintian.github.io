@@ -1,6 +1,5 @@
 var toggle_button = document.getElementById("toggle-dark-mode");
 var menu = document.getElementById("menu");
-var articleContent = document.getElementById("content");
 var topbar = document.getElementById("topbar");
 
 var isMobile = false; //initiate as false

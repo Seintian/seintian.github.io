@@ -113,7 +113,8 @@ body.light-mode aside#menu div.sticky {
     background: #999;
 }
 aside#menu h2 {
-    margin: .7rem .5rem;
+    margin: .5rem;
+    margin-top: 1rem;
 }
 aside#menu a {
     display: block;
@@ -121,6 +122,33 @@ aside#menu a {
 }
 ol, ul {
     padding-left: 15px;
+}
+
+/* INDEX STYLES */
+article div.img-preview img {
+    width: 50%;
+}
+article div.img-preview {
+    display: inline;
+    margin: .5rem;
+    line-height: 0;
+}
+article div.img-preview a {
+    text-decoration: none;
+}
+.inline {
+    display: inline;
+    width: 50px;
+    margin: 0 1em;
+    align-content: center;
+    vertical-align: middle;
+}
+article div.text {
+    display: inline-block;
+}
+article div.row-grid {
+    display: block;
+    margin: 10% 0;
 }
 
 /* CONTENTS, CODEBLOCKS AND DEFINITIONS */

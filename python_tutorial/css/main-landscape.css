@@ -5,6 +5,12 @@ html, body {
     font-family: "Lato", "sans-serif";
     scroll-behavior: smooth;
 }
+* {
+    box-sizing: border-box;
+}
+iframe {
+    border: 0;
+}
 
 /* different styles every mode */
 body.dark-mode {
@@ -104,11 +110,30 @@ aside#menu div.sticky {
     position: fixed;
 }
 aside#menu h2 {
-    margin: .7rem .5rem;
+    margin: .5rem;
+    margin-top: 1rem;
 }
 aside#menu a {
     display: block;
     margin: .5rem;
+}
+
+/* INDEX STYLES */
+article div.row-grid {
+    display: flex;
+    margin-bottom: 10%;
+}
+article div.img-preview, article div.text, article div.img-code {
+    flex: 30%;
+}
+article div.img-preview img {
+    width: 100%;
+}
+article div.text {
+    margin: 0 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* CONTENTS, CODEBLOCKS AND DEFINITIONS */
@@ -116,7 +141,7 @@ article div.content {
     margin: 2rem;
 }
 code {
-    width: 500px;
+    width: 705px;
     min-width: 300px;
     background: #222;
     color: rgb(200, 200, 200);

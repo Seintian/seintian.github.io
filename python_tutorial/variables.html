@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,11 +33,13 @@
         <aside id="menu">
             <div class="sticky">
                 <h2>Variabili</h2>
-                <a href="variables.html">Tipi di variabili</a>
-                <a href="var_scopes.html">Variabili locali e globali</a>
+                <a href="variables.html#variables">Tipi di variabili</a>
+                <a href="variables.html#var_scopes">Variabili locali e globali</a>
+                <h2>Funzioni</h2>
+                <a href="functions.html">Funzioni</a>
             </div>
         </aside>
-        <article id="content">
+        <article>
             <div id="variables" class="content">
                 <h1>Tipi di variabili</h1>
                 <p>
@@ -170,6 +172,40 @@
                             </tr>
                         </tbody>
                     </table>
+                </p>
+            </div>
+            <div id="var_scopes" class="content">
+                <h1>Variabili globali e locali</h1>
+                <p>
+                    In Python, come in altri linguaggi di programmazione, le variabili hanno uno "scope",
+                    cioè possono essere globali o locali.
+                    <ul>
+                        <li>Le variabili globali sono accessibili da ogni parte del codice
+            
+                            <pre>
+                                <code class="lang-python">
+    var = 5
+    def function():
+        print(var) // dichiarata al di fuori della funzione, ma essendo globale sarà accessibile
+    function()
+    >>> 5
+            
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Le variabili locali, invece, sono accessibili solo nella funzione o classe 
+                            in questione.
+            
+                            <pre>
+                                <code class="lang-python">
+    def function():
+        var = 20
+    print(var) // la funzione print non riuscirà a trovare nessuna variabile con quel nome
+    >>> NameError: name 'var' is not defined
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
                 </p>
             </div>
         </article>
