@@ -21,6 +21,9 @@ body.light-mode th {
 table {
     border-spacing: 5px;
 }
+td.code-example {
+    font-family: monospace;
+}
 
 body.dark-mode tr:nth-child(even) {
     background-color: rgb(100, 100, 100);
