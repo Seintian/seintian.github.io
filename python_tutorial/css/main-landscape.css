@@ -5,6 +5,7 @@ html, body {
     font-family: "Lato", "sans-serif";
     scroll-behavior: smooth;
     height: 100%;
+    overflow-x: hidden;
 }
 * {
     box-sizing: border-box;
@@ -92,27 +93,24 @@ nav div#menu-button:hover:active {
 /* ARTICLE STYLES */
 div.row {
     display: flex;
-    padding-top: 3em;
+    padding-top: 3rem;
 }
 aside#menu {
-    display: block;
-    flex: initial;
-    width: 250px;
-    min-width: 150px;
+    flex: 1 1 200px;
+    min-width: 200px;
     margin: 0;
     font-size: 1rem;
-    height: 100%;
     padding: 1rem;
     position: relative;
-    float: left;
 }
 article {
-    flex: 1;
+    flex: 1 1 auto;
 }
 aside#menu div.sticky {
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
+    top: 5rem;
+    width: 250px;
 }
 aside#menu h2 {
     margin: .5rem;
@@ -124,9 +122,13 @@ aside#menu a {
 }
 
 /* FOOTER STYLES */
-footer {
+body.dark-mode footer {
     display: flex;
     background: linear-gradient(360deg, #333 0%, rgba(12,12,12,1) 50%, rgba(20,20,20,1) 100%);
+}
+body.light-mode footer {
+    display: flex;
+    background: linear-gradient(360deg, #333 0%, rgb(200, 200, 200) 50%, rgb(230, 230, 230) 100%);
 }
 footer div {
     padding: 5%;
@@ -145,7 +147,7 @@ footer div.author img {
 }
 footer div.author .text {
     color: #fff;
-    font-size: 20px;
+    font-size: 1.3em;
     line-height: 1.5rem;
     text-shadow: 2px 2px 10px #000;
     text-align: center;
