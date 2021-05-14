@@ -141,7 +141,8 @@ body.dark-mode footer {
     background: linear-gradient(360deg, #333 0%, rgba(12,12,12,1) 50%, rgba(20,20,20,1) 100%);
 }
 body.light-mode footer {
-    background: linear-gradient(360deg, #333 0%, rgb(200, 200, 200) 50%, rgb(230, 230, 230) 100%);}
+    background: linear-gradient(360deg, #333 0%, rgb(200, 200, 200) 50%, rgb(230, 230, 230) 100%);
+}
 footer div {
     padding: 5%;
     padding-top: 2%;

@@ -2,13 +2,15 @@
 article div.content {
     margin: 2rem;
 }
-code {
+body.dark-mode code {
     width: 75%;
     min-width: 300px;
     background: #222;
     color: rgb(200, 200, 200);
 }
 body.light-mode code {
+    width: 75%;
+    min-width: 300px;
     background: rgb(220, 220, 220);
     color: rgb(50, 50, 50);
     border-left: 4px solid green;
