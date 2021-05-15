@@ -1,0 +1,63 @@
+#form-container {
+    margin: 3rem auto;
+    padding: 3rem 2rem;
+    display: flex;
+    width: 800px;
+    background: #333;
+    box-shadow: 1px 1px 5px rgb(100, 100, 100);
+}
+#form-background {
+    flex: 50%;
+    background-image: url("../img/programmazione_2.jpg");
+    background-size: 200% 100%;
+}
+#form-content {
+    color: rgb(200, 200, 200);
+    flex: 50%;
+    padding: 3rem;
+    background: rgb(100, 100, 100);
+    position: relative;
+}
+#forgot-pwd {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+#forgot-pwd a {
+    color: rgb(200, 200, 200);
+    font-size: .8rem;
+}
+input[type="text"], input[type="password"] {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    margin: .5rem 0;
+    transition: .5s;
+    border-bottom: 2px solid #19a04b;
+    color: rgb(200, 200, 200);
+    font-family: "Lato", "sans-serif";
+}
+input::placeholder {
+    color: rgb(200, 200, 200);
+}
+input:focus, button[type="submit"] {
+    outline: 0;
+}
+input:active:valid {
+    background: transparent;
+}
+button[type="submit"] {
+    border: 0;
+    background: transparent;
+    color: rgb(200, 200, 200);
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid #19a04b;
+}
+button[type="submit"]:hover {
+    background: rgb(150, 150, 150);
+    cursor: pointer;
+}
+#checkbox-label {
+    user-select: none;
+}

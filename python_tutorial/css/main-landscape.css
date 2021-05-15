@@ -10,9 +10,6 @@ html, body {
 * {
     box-sizing: border-box;
 }
-iframe {
-    border: 0;
-}
 
 /* different styles every mode */
 body.dark-mode {
@@ -114,10 +111,10 @@ aside#menu {
 }
 article {
     flex: 1 1 auto;
+    margin-left: 2rem;
 }
 aside#menu div.sticky {
     position: sticky;
-    position: -webkit-sticky;
     top: 5rem;
     width: 250px;
 }

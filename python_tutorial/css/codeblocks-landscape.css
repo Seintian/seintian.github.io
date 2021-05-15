@@ -1,6 +1,7 @@
 /* CONTENTS, CODEBLOCKS AND DEFINITIONS */
 article div.content {
     margin: 2rem;
+    margin-left: 0;
 }
 body.dark-mode code {
     width: 75%;

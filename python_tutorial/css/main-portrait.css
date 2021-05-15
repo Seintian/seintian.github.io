@@ -52,33 +52,18 @@ nav div#home {
     margin-top: .5rem;
     font-size: 1.5rem;
 }
-@media screen and (min-width: 500px) {
-    nav div#home {
-        margin-right: 25%;
-    }
-}
-@media screen and (min-width: 330px) {
-    nav div#home {
-        margin-right: 10%;
-    }
-}
-@media screen and (max-width: 329px) {
-    nav div#home {
-        margin-right: 5%;
-    }
-}
 nav div#home a {
     text-decoration: none;
     vertical-align: middle;
     font-size: 1.5rem;
-    line-height: 1;
+    line-height: 1.5;
 }
 body.light-mode nav div#home a { color:rgb(50, 50, 50) }
 body.dark-mode nav div#home a { color: rgb(200, 200, 200) }
 nav div#menu-button {
     font-size: 1.5rem;
     cursor: pointer;
-    line-height: 1;
+    line-height: 1.5;
     width: 70%;
     user-select: none;
 }

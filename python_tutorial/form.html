@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="Learn Python">
+    <meta name="description" property="og:description" content="A Python tutorial with definitions, usage examples, hints...">
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="css/main-landscape.css" type="text/css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="css/main-portrait.css" type="text/css" media="screen and (orientation: portrait)">    
+    <link rel="stylesheet" href="css/form-landscape.css" type="text/css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="css/form-portrait.css" type="text/css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../highlight/styles/vs2015.css">
+    <script src="../highlight/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="../JQuery/jquery.min.js"></script>
+</head>
+<body class="dark-mode">
+    <nav class="dark-mode" id="topbar">
+        <div onclick="toggleMenu()" id="menu-button">
+            <span>&#x2630 Menu</span>
+        </div>
+        <div onclick="toggleDarkMode()" id="toggle-dark-mode">
+            <img src="img/light_mode-icon.png" alt="Toggle Dark Mode" width="32px" id="toggle-img">
+        </div>
+        <div id="home">
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+        </div>
+    </nav>
+    <div class="row">
+        <aside id="menu">
+            <div class="sticky" id="sticky">
+                <h2>Variabili</h2>
+                <a href="variables.html#variables">Tipi di variabili</a>
+                <a href="variables.html#var_scopes">Variabili locali e globali</a>
+                <h2>Funzioni</h2>
+                <a href="functions.html">Funzioni</a>
+                <h2>Classi</h2>
+                <a href="classes.html">Classi</a>
+            </div>
+        </aside>
+        <article>
+            <div class="content">
+                <div id="form-container">
+                    <div id="form-background">
+
+                    </div>
+                    <div id="form-content">
+                        <form method="post" action='form.php'>
+                            <label for="fname"><b>First name</b></label><br>
+                            <input type="text" placeholder="Enter first name" name="fname" required><br><br>
+
+                            <label for="lname"><b>Last name</b></label><br>
+                            <input type="text" placeholder="Enter last name" name="lname" required><br><br>
+
+                            <label for="email"><b>Email</b></label><br>
+                            <input type="text" placeholder="Enter email" name="email" required><br><br>
+
+                            <label for="password"><b>Password</b></label><br>
+                            <input type="password" placeholder="Enter password" name="password" required><br><br>
+
+                            <button type="submit">Submit</button>
+                            <label id="checkbox-label">
+                                <input type="checkbox" checked="checked" name="remember">
+                                Remember me
+                            </label><br>
+
+                            <span id="forgot-pwd"><a href="#">Hai dimenticato la password?</a></span>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <div class="author">
+            <h2>Author of the page</h2>
+
+            <img src="img/programmazione_2.jpg" alt="Foto Profilo">
+            <div class="text">
+                <h2><strong>Christian Santarelli</strong></h2>
+                <p>A High School student who likes<br>programming.</p>
+            </div>
+        </div>
+        <div class="links">
+            <h2>Useful links</h2>
+            <p>
+                <a href="../" target="_blank">Main page of the site</a>
+            </p>
+            <p>
+                <a href="../learning/" target="_blank">Main directory of the site</a>
+                <strong>(personal purpose)</strong>
+            </p>
+            <p>
+                <a href="mailto:example@gmail.com">Link to my email address</a>: example@gmail.com
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        menu.style.display = "none";
+    </script>
+</body>
+</html>
