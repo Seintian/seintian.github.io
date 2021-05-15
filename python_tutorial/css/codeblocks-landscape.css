@@ -22,9 +22,12 @@ body.light-mode code span.hljs-number {
 body.light-mode code span.hljs-string {
     color: #997160;
 }
+body.light-mode code span.hljs-function {
+    color: rgb(20, 20, 20);
+}
 body.light-mode code span.hljs-keyword {
     color: #345c7c;
 }
-body.light-mode code span.hljs-built_in {
+body.light-mode code span.hljs-built_in, code span.hljs-title {
     color: #3e9e8b;
 }

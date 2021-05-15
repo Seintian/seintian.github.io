@@ -1,7 +1,7 @@
 /* CONTENTS, CODEBLOCKS AND DEFINITIONS */
 article div.content {
     margin: 2rem 0;
-    width: 65%;
+    width: 95%;
 }
 body.dark-mode code {
     width: 300px;
@@ -24,6 +24,6 @@ body.light-mode code span.hljs-string {
 body.light-mode code span.hljs-keyword {
     color: #345c7c;
 }
-body.light-mode code span.hljs-built_in {
+body.light-mode code span.hljs-built_in, code span.hljs-title {
     color: #3e9e8b;
 }
