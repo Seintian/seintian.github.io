@@ -9,6 +9,11 @@ body.dark-mode code {
     background: #222;
     color: rgb(200, 200, 200);
 }
+body.dark-mode code.inline-code {
+    padding: 3px;
+    background: #222;
+    color: rgb(200, 200, 200);
+}
 body.light-mode code {
     width: 75%;
     min-width: 300px;
@@ -16,6 +21,12 @@ body.light-mode code {
     color: rgb(50, 50, 50);
     border-left: 4px solid green;
     border-radius: 4px;
+}
+body.light-mode code.inline-code {
+    padding: 3px;
+    background: rgb(200, 200, 200);
+    color: rgb(50, 50, 50);
+    border: 0;
 }
 body.light-mode code span.hljs-number {
     color: #337e01;

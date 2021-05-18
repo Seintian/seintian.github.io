@@ -22,8 +22,9 @@
         <div onclick="toggleMenu()" id="menu-button">
             <span>&#x2630 Menu</span>
         </div>
-        <div onclick="toggleDarkMode()" id="toggle-dark-mode">
-            <img src="img/light_mode-icon.png" alt="Toggle Dark Mode" width="32px" id="toggle-img">
+        <div id="toggle-dark-mode">
+            <img src="img/light_mode-icon.png" alt="Toggle Dark Mode" width="32px" id="toggle-img" onclick="toggleDarkMode()">
+            <a href="form.html" id="signin-link">Sign in <i class="fa fa-sign-in"></i></a>
         </div>
         <div id="home">
             <a href="index.html"><i class="fa fa-home"></i> Home</a>
@@ -36,14 +37,168 @@
                 <a href="variables.html#variables">Tipi di variabili</a>
                 <a href="variables.html#var_scopes">Variabili locali e globali</a>
                 <h2>Funzioni</h2>
-                <a href="functions.html">Funzioni</a>
-                <h2>Classi</h2>
-                <a href="classes.html">Classi</a>
+                <a href="functions.html#built_in">Built-in</a>
+                <a href="functions.html#define">Definire una funzione</a>
+                <a href="functions.html#recursive">Funzioni recursive</a>
             </div>
         </aside>
         <article>
-            <div class="content">
+            <div class="content" id="built_in">
+                <h1>Funzioni built-in di Python</h1>
+                <p>
+                    Python offre moltissime funzioni già fatte che possiamo utilizzare per i nostri programmi,
+                    senza doverle ogni volta ricreare.
+                    Qui una lista delle più utili e comuni:
+                    <ul>
+                        <li>
+                            <h2>Le funzioni I/O (Input/Output)</h2>
+                            In Python sono due le funzioni più utilizzate nei flussi di I/O: <code class="inline-code">input()</code>
+                            e <code class="inline-code">print()</code>.
+                            <p>
+                                La prima permette di creare un flusso di dati che consente all'utente di inserire
+                                dei dati nel programma.
 
+                                <pre>
+                                    <code class="lang-python">
+    input("Inserisci un numero: ")
+    >>> Inserisci un numero: <b>_</b>
+                                    </code>
+                                </pre>
+                            </p>
+                            NB: i dati inseriti in input vengono sempre inseriti come stringhe, a meno che
+                            non si usino funzioni come <code class="inline-code">eval()</code>.
+                            <p>
+                                La seconda permette, invece, di visualizzare delle stringhe in console.
+
+                                <pre>
+                                    <code class="lang-python">
+    print("ciao", nomeInserito, ":D")
+    >>> ciao Christian :D
+                                    </code>
+                                </pre>
+                            </p>
+                            NB: si possono inserire più argomenti all'interno di ogni print: verrà stampato
+                            ogni argomento, uno dopo l'altro, lasciando un carattere vuoto tra ognuno.
+                        </li>
+                        <li>
+                            <h2>Int(), string(), list()...</h2>
+                            <p>
+                                In Python esistono molte funzioni che permettono di tramutare una variabile da
+                                un tipo ad un altro.
+                                Vediamo qualche esempio:
+                            </p>
+                            <ul>
+                                <li>
+                                    <h3>int()</h3>
+                                    Questa funzione permette di trasformare una variabile stringa o float in
+                                    un intero.
+
+                                    <pre>
+                                        <code class="lang-python">
+    stringa = "13"
+    print(int(stringa) + 2)
+    >>> 15
+                                        </code>
+                                    </pre>
+                                </li>
+                                <li>
+                                    <h3>string()</h3>
+                                    Questa funzione, invece, trasforma una variabile di qualsiasi tipo in una
+                                    stringa.
+
+                                    <pre>
+                                        <code class="lang-python">
+    numeroClasse = 3
+    print("Classe:", string(numeroClasse) + "B")
+    >>> Classe: 3B
+                                        </code>
+                                    </pre>
+                                </li>
+                                <li>
+                                    <h3>list()</h3>
+                                    Questa funzione, infine, permette di tramutare in lista una struttura dati
+                                    in sequenza, come un set o una tupla, per esempio.
+
+                                    <pre>
+                                        <code class="lang-python">
+    tupla = ("Lunedì", "Martedì", "Mercoledì")
+    print(list(tupla))
+    >>> list("Lunedì", "Martedì", "Mercoledì")
+                                        </code>
+                                    </pre>
+                                </li>
+                            </ul>
+                            Ci sono molte altre funzioni simili a queste, come <code class="inline-code">
+                            tuple()</code>, <code class="inline-code">float()</code>... le vedrete 
+                            programmando all'occorrenza ;)
+                        </li>
+                        <li>
+                            <h2>len()</h2>
+                            Questa è una funzione che vi tornerà utile spesso, davvero.
+                            Ritorna la quantità di elementi che una sequenza contiene, cioè una qualsiasi
+                            struttura dati che contiene delle variabili, in intero.
+
+                            <pre>
+                                <code class="lang-python">
+    lista = [1, 2, 3, 4, 5, 6, 7]
+    print(len(lista))
+    >>> 7
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div class="content" id="define">
+                <h1>Definire una funzione</h1>
+                <p>
+                    Bene, adesso vediamo come possiamo noi definire una funzione all'occorrenza.
+                    Per definire una funzione bisogna anteporre al blocco di codice la keyword
+                    <code class="inline-code">def</code>, successivamente, separato con uno spazio, il
+                    nome della funzione, le parentesi con gli argomenti richiesti subito dopo,
+                    <i>:</i> e, andando a capo con un'indentazione, 
+                    si può dichiarare ciò che deve eseguire la funzione quando richiamata.
+
+                    <pre>
+                        <code class="lang-python">
+    def funzione(a, b):
+        return a + b
+    print(funzione(1, 2))
+    >>> 3
+                        </code>
+                    </pre>
+                    NB: per richiamare la funzione, questa dev'essere dichiarata nelle righe precedenti.
+                </p>
+            </div>
+            <div class="content" id="recursive">
+                <h1>Funzioni recursive</h1>
+                <p>
+                    Abbiamo visto nella sezione precedente la keyword <code class="inline-code">return</code>.
+                    Questa, come avrete intuito, dichiara a Python cosa la funzione deve ritornare al resto 
+                    del codice, in quel caso la somma tra i due argomenti immessi come parametri richiesti 
+                    nelle parentesi.
+                </p>
+                <p>
+                    Se nel return della funzione viene richiamata la funzione stessa, si parla di funzione 
+                    "recursive", cioè che la funzione richiama essa stessa all'interno del proprio codice. 
+
+                    <pre>
+                        <code class="lang-python">
+    def countDown(count = 3):
+        print(count)
+        count -= 1 // diminuisce di 1 ad ogni richiamo
+        if count > 0:
+            countDown(count)
+        else:
+            print("Finished!")
+    countDown()
+    >>> 3
+    >>> 2
+    >>> 1
+    >>> Finished!
+                        </code>
+                    </pre>
+                </p>
             </div>
         </article>
     </div>
@@ -63,8 +218,7 @@
                 <a href="../" target="_blank">Main page of the site</a>
             </p>
             <p>
-                <a href="../learning/" target="_blank">Main directory of the site</a>
-                <strong>(personal purpose)</strong>
+                <a href="https://www.curiepinerolo.edu.it/" target="_blank">Link of my school</a>
             </p>
             <p>
                 <a href="mailto:example@gmail.com">Link to my email address</a>: example@gmail.com

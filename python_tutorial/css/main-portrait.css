@@ -5,6 +5,7 @@ html, body {
     font-family: "Lato", "sans-serif";
     scroll-behavior: smooth;
     overflow-x: hidden;
+    transition: .5s;
 }
 body {
     overflow: unset;
@@ -46,10 +47,12 @@ nav div {
     margin: .5rem;
 }
 nav div#home {
-    float: right;
+    position: absolute;
+    display: block;
     margin: 0;
-    margin-right: 25%;
-    margin-top: .5rem;
+    margin-right: 40%;
+    top: .5rem;
+    left: 35%;
     font-size: 1.5rem;
 }
 nav div#home a {
@@ -57,6 +60,27 @@ nav div#home a {
     vertical-align: middle;
     font-size: 1.5rem;
     line-height: 1.5;
+}
+#signin-link {
+    float: left;
+    height: 2rem;
+    font-size: 1.5rem;
+    padding: 0 .5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .25rem;
+}
+#signin-link .fa-sign-in {
+    padding-left: .5rem;
+    font-size: 2rem;
+}
+body.dark-mode #signin-link {
+    color: rgb(200, 200, 200);
+}
+body.light-mode #signin-link {
+    color: rgb(20, 20, 20);
 }
 body.light-mode nav div#home a { color:rgb(50, 50, 50) }
 body.dark-mode nav div#home a { color: rgb(200, 200, 200) }
