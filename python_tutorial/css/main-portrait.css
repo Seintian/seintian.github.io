@@ -42,72 +42,139 @@ nav.dark-mode {
 nav.light-mode {
     background: #999;
 }
-nav div {
-    display: inline-block;
-    margin: .5rem;
+@media screen and (min-width: 400px) {
+    nav div {
+        display: inline-block;
+        margin: .5rem;
+    }
+    nav div#home {
+        position: absolute;
+        display: block;
+        margin: 0;
+        margin-right: 40%;
+        top: .5rem;
+        left: 35%;
+        font-size: 1.5rem;
+    }
+    nav div#home a {
+        text-decoration: none;
+        vertical-align: middle;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    #signin-link {
+        float: left;
+        height: 2rem;
+        font-size: 1.5rem;
+        padding: 0 .5rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: .25rem;
+    }
+    #signin-link .fa-sign-in {
+        padding-left: .5rem;
+        font-size: 2rem;
+    }
+    body.dark-mode #signin-link {
+        color: rgb(200, 200, 200);
+    }
+    body.light-mode #signin-link {
+        color: rgb(20, 20, 20);
+    }
+    body.light-mode nav div#home a { color:rgb(50, 50, 50) }
+    body.dark-mode nav div#home a { color: rgb(200, 200, 200) }
+    nav div#menu-button {
+        font-size: 1.5rem;
+        cursor: pointer;
+        line-height: 1.5;
+        width: 70%;
+        user-select: none;
+    }
+    nav div#toggle-dark-mode {
+        float: right;
+        margin-bottom: 0;
+    }
+    nav div#toggle-dark-mode img {
+        cursor: pointer;
+    }
+    nav div#toggle-dark-mode img:hover:active {
+        background: #555555;
+    }
+    nav div#menu-button {
+        width: 7.5rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+    nav div#menu-button:hover:active {
+        background: #555555;
+    }
 }
-nav div#home {
-    position: absolute;
-    display: block;
-    margin: 0;
-    margin-right: 40%;
-    top: .5rem;
-    left: 35%;
-    font-size: 1.5rem;
-}
-nav div#home a {
-    text-decoration: none;
-    vertical-align: middle;
-    font-size: 1.5rem;
-    line-height: 1.5;
-}
-#signin-link {
-    float: left;
-    height: 2rem;
-    font-size: 1.5rem;
-    padding: 0 .5rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: .25rem;
-}
-#signin-link .fa-sign-in {
-    padding-left: .5rem;
-    font-size: 2rem;
-}
-body.dark-mode #signin-link {
-    color: rgb(200, 200, 200);
-}
-body.light-mode #signin-link {
-    color: rgb(20, 20, 20);
-}
-body.light-mode nav div#home a { color:rgb(50, 50, 50) }
-body.dark-mode nav div#home a { color: rgb(200, 200, 200) }
-nav div#menu-button {
-    font-size: 1.5rem;
-    cursor: pointer;
-    line-height: 1.5;
-    width: 70%;
-    user-select: none;
-}
-nav div#toggle-dark-mode {
-    float: right;
-    margin-bottom: 0;
-}
-nav div#toggle-dark-mode img {
-    cursor: pointer;
-}
-nav div#toggle-dark-mode img:hover:active {
-    background: #555555;
-}
-nav div#menu-button {
-    width: 7.5rem;
-    text-align: center;
-    vertical-align: middle;
-}
-nav div#menu-button:hover:active {
-    background: #555555;
+@media screen and (max-width: 399px) {
+    nav div {
+        display: block;
+        margin: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav div#home {
+        font-size: 1.5rem;
+    }
+    nav div#home a {
+        text-decoration: none;
+        vertical-align: middle;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    #signin-link {
+        height: 2rem;
+        font-size: 1.5rem;
+        padding: 0 .5rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: .25rem;
+    }
+    #signin-link .fa-sign-in {
+        padding-left: .5rem;
+        font-size: 2rem;
+    }
+    body.dark-mode #signin-link {
+        color: rgb(200, 200, 200);
+    }
+    body.light-mode #signin-link {
+        color: rgb(20, 20, 20);
+    }
+    body.light-mode nav div#home a { color:rgb(50, 50, 50) }
+    body.dark-mode nav div#home a { color: rgb(200, 200, 200) }
+    nav div#menu-button {
+        font-size: 1.5rem;
+        cursor: pointer;
+        line-height: 1.5;
+        user-select: none;
+        text-align: center;
+        vertical-align: middle;
+    }
+    nav div#toggle-dark-mode {
+        margin-bottom: 0;
+    }
+    nav div#toggle-dark-mode img {
+        cursor: pointer;
+    }
+    nav div#toggle-dark-mode img:hover:active {
+        background: #555555;
+    }
+    nav div#menu-button:hover:active {
+        background: #555555;
+    }
+    
+    /* BUG FIX */
+    article {
+        padding-top: 5rem;
+    }
 }
 
 /* ARTICLE STYLES */
