@@ -224,7 +224,6 @@ ol, ul {
 
 /* FOOTER STYLES */
 footer {
-    margin: -5%;
     padding: 5%;
     background: rgb(10, 10, 10);
     display: flex;
@@ -244,7 +243,6 @@ footer div {
 footer div.author {
     flex: 40%;
     position: relative;
-    width: 100%;
 }
 footer div.author img {
     border-radius: 4px;
@@ -263,14 +261,19 @@ footer div.author .text {
     transform: translate(-50%, -50%);
     width: 100%;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
     footer div.author .text {
         font-size: 1.3rem;
     }
 }
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 400px) {
     footer div.author .text {
         font-size: 1rem;
+    }
+}
+@media screen and (max-width: 399px) {
+    footer div.author .text {
+        font-size: .7rem;
     }
 }
 footer div.links {

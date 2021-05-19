@@ -2,6 +2,7 @@ var toggle_button = document.getElementById("toggle-dark-mode");
 var menu = document.getElementById("menu");
 var topbar = document.getElementById("topbar");
 
+/* Replace the dark-mode icon every time, also classes of the body and the topbar */
 function toggleDarkMode() {
     if (document.body.classList.contains("dark-mode")) {
         document.body.classList.remove("dark-mode");
@@ -25,6 +26,7 @@ function toggleDarkMode() {
     
 }
 
+/* If the menu element has a style attribute in html code, else... */
 function toggleMenu() {
     if (!menu.getAttribute("style") || menu.style.display == "none") {
         menu.style.display = "block";
@@ -33,13 +35,14 @@ function toggleMenu() {
     }
 }
 
+/* To simulate a working form :') */
 function redirectToIndex() {
     var inputs = document.getElementsByTagName("input");
     var ok = true;
 
     for (var i = 0; i < inputs.length; i++) {
         if (!inputs[i].checkValidity()) {
-            console.log(inputs[i].id + " is required to submit the form<br>");
+            console.log(inputs[i].id + " is required to submit the form");
             ok = false;
         }
     }
