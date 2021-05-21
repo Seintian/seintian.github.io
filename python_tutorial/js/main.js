@@ -26,27 +26,12 @@ function toggleDarkMode() {
     
 }
 
-/* If the menu element has a style attribute in html code, else... */
+/* Toggles the menu as the style attribute changes */
 function toggleMenu() {
-    if (!menu.getAttribute("style") || menu.style.display == "none") {
-        menu.style.display = "block";
-    } else {
+    if (!menu.getAttribute("style") || menu.style.display == "block") {
         menu.style.display = "none";
-    }
-}
 
-/* To simulate a working form :') */
-function redirectToIndex() {
-    var inputs = document.getElementsByTagName("input");
-    var ok = true;
-
-    for (var i = 0; i < inputs.length; i++) {
-        if (!inputs[i].checkValidity()) {
-            console.log(inputs[i].id + " is required to submit the form");
-            ok = false;
-        }
-    }
-    if (ok) {
-        window.location.href = "./";
+    } else {
+        menu.style.display = "block";
     }
 }

@@ -53,19 +53,29 @@
                         <!-- it doesn't really work, but I wanna simulate it works ;) -->
                         <form onsubmit='return false;'>
                             <label for="fname"><b>First name</b></label><br>
-                            <input type="text" placeholder="Enter first name" name="fname" id="fname" required><br><br>
+                            <input type="text" placeholder="Enter first name" name="fname" id="fname" required
+                             pattern="[a-zA-Z]+" requiredPattern="Sono ammessi solo caratteri alfabetici"><br><br>
 
                             <label for="lname"><b>Last name</b></label><br>
-                            <input type="text" placeholder="Enter last name" name="lname" id="lname" required><br><br>
+                            <input type="text" placeholder="Enter last name" name="lname" id="lname" required
+                             pattern="[a-zA-Z]+" requiredPattern="Sono ammessi solo caratteri alfabetici"><br><br>
 
                             <label for="telephone"><b>Telephone number</b></label><br>
-                            <input type="number" placeholder="Enter telephone number" name="telephone" id="telephone" required><br><br>
+                            <input type="number" placeholder="Enter telephone number" name="telephone" 
+                             id="telephone" required><br><br>
 
                             <label for="email"><b>Email</b></label><br>
-                            <input type="text" placeholder="Enter email" name="email" id="email" required><br><br>
+                            <input type="text" placeholder="Enter email" name="email" id="email" required
+                             pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                             requiredPattern="Controlla di aver inserito correttamente la tua email:
+                             dev'esserci un primo gruppo di caratteri qualsiasi, la chiocciola, lettere e/o 
+                             numeri, un punto, e ancora lettere e/o numeri"><br><br>
 
                             <label for="password"><b>Password</b></label><br>
-                            <input type="password" placeholder="Enter password" name="password" id="password" required><br><br>
+                            <input type="password" placeholder="Enter password" name="password" 
+                             id="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(.{8,})"
+                             requiredPattern="Almeno 8 caratteri, almeno una minuscola e una maiuscola, 
+                             almeno un numero e almeno un carattere speciale"><br><br>
 
                             <button type="submit" onclick='redirectToIndex();'>Submit</button>
                             <label id="checkbox-label">
