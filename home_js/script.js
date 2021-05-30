@@ -68,4 +68,19 @@ function loadSiteMetas() {
     
         $meta.remove();
     });
+    
+    $("#pythontutorial-title").load("python_tutorial/ meta[name='title']", function(response, status, xhr) {
+        var $meta = $("meta", this);
+    
+        $(this).text($meta.attr("content"));
+    
+        $meta.remove();
+    });
+    $("#pythontutorial-desc").load("python_tutorial/ meta[name='description']", function(response, status, xhr) {
+        var $meta = $("meta", this);
+    
+        $(this).text($meta.attr("content"));
+    
+        $meta.remove();
+    });
 }
