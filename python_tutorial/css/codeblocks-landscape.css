@@ -3,9 +3,11 @@ article div.content {
     margin: 2rem;
     margin-left: 0;
 }
-body.dark-mode code {
+pre {
     width: 75%;
     min-width: 300px;
+}
+body.dark-mode code {
     background: #222;
     color: rgb(200, 200, 200);
 }
@@ -15,8 +17,6 @@ body.dark-mode code.inline-code {
     color: rgb(200, 200, 200);
 }
 body.light-mode code {
-    width: 75%;
-    min-width: 300px;
     background: rgb(220, 220, 220);
     color: rgb(50, 50, 50);
     border-left: 4px solid green;
@@ -42,4 +42,10 @@ body.light-mode code span.hljs-keyword {
 }
 body.light-mode code span.hljs-built_in, code span.hljs-title {
     color: #3e9e8b;
+}
+
+div.tips {
+    border-radius: 4px;
+    border-left: 5px solid rgb(25, 100, 55);
+    padding: 1rem;
 }
