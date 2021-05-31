@@ -37,11 +37,7 @@ function toggleMenu() {
     }
 }
 
-/* TODO:
-    Fare in modo che la pagina del sito sia unica e che i link in realtà eseguano funzioni JS che 
-    visualizzano la "parte di pagina" che si vuole, come se cambiasse pagina.
-    Utilizza index.html
-*/
+/* Made one page that contains all the others */
 function toggleArticles(toggled) {
     for (var article of articles) {
         article.style.display = "none";
