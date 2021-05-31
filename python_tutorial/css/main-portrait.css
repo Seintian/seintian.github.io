@@ -174,9 +174,12 @@ nav.light-mode {
         background: #555555;
     }
     
-    /* BUG FIX */
+    /* BUG FIXES */
     article {
         padding-top: 5rem;
+    }
+    aside#menu div.sticky {
+        top: 8rem;
     }
 }
 
