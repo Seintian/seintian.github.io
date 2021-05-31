@@ -2,6 +2,13 @@ var toggle_button = document.getElementById("toggle-dark-mode");
 var menu = document.getElementById("menu");
 var topbar = document.getElementById("topbar");
 var articles = document.getElementsByTagName("article");
+var screenHeight = window.innerHeight;
+var screenWidth = window.innerWidth;
+
+/* MOBILE MENU BUG FIXED */
+if (screenHeight > screenWidth) {
+    menu.style.display = "none";
+}
 
 /* Replace the dark-mode icon every time, also classes of the body and the topbar */
 function toggleDarkMode() {
