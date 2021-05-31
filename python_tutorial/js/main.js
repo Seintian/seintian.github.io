@@ -51,6 +51,7 @@ function toggleArticles(toggled) {
     for (var article of articles) {
         article.style.display = "none";
     }
+    
     document.getElementById(toggled).style.display = "block";
     if (toggled == "form-html") {
         menu.style.display = "none";
