@@ -8,6 +8,8 @@ var screenWidth = window.innerWidth;
 /* MOBILE MENU BUG FIXED */
 if (screenHeight > screenWidth) {
     menu.style.display = "none";
+} else {
+    menu.style.display = "block";
 }
 
 /* Replace the dark-mode icon every time, also classes of the body and the topbar */
@@ -36,7 +38,7 @@ function toggleDarkMode() {
 
 /* Toggles the menu as the style attribute changes */
 function toggleMenu() {
-    if (!menu.getAttribute("style") || menu.style.display == "block") {
+    if (menu.style.display == "block") {
         menu.style.display = "none";
 
     } else {
