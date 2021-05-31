@@ -192,3 +192,7 @@ footer div.links {
         font-size: .7rem;
     }
 }
+
+#index-html, #variables-html, #functions-html {
+    margin-left: 5%;
+}

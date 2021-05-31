@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="css/main-portrait.css" type="text/css" media="screen and (orientation: portrait)">    
     <link rel="stylesheet" href="css/index-landscape.css" type="text/css" media="screen and (orientation: landscape)">
     <link rel="stylesheet" href="css/index-portrait.css" type="text/css" media="screen and (max-width: 1100px)">
+    <link rel="stylesheet" href="css/codeblocks-landscape.css" type="text/css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="css/codeblocks-portrait.css" type="text/css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="css/form-landscape.css" type="text/css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="css/form-portrait.css" type="text/css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="css/tabella-landscape.css" type="text/css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="css/tabella-portrait.css" type="text/css" media="screen and (orientation: portrait)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../highlight/styles/vs2015.css">
     <script src="../highlight/highlight.pack.js"></script>
@@ -25,25 +31,25 @@
         </div>
         <div id="toggle-dark-mode">
             <img src="img/light_mode-icon.png" alt="Toggle Dark Mode" width="32px" id="toggle-img" onclick="toggleDarkMode()">
-            <a href="form.html" id="signin-link">Sign in <i class="fa fa-sign-in"></i></a>
+            <a href="#" onclick="toggleArticles('form-html')" id="signin-link">Sign in <i class="fa fa-sign-in"></i></a>
         </div>
         <div id="home">
-            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            <a href="#" onclick="toggleArticles('index-html')"><i class="fa fa-home"></i> Home</a>
         </div>
     </nav>
     <div class="row">
         <aside id="menu">
             <div class="sticky" id="sticky">
                 <h2>Variabili</h2>
-                <a href="variables.html#variables">Tipi di variabili</a>
-                <a href="variables.html#var_scopes">Variabili locali e globali</a>
+                <a href="#variables" onclick="toggleArticles('variables-html')">Tipi di variabili</a>
+                <a href="#var_scopes" onclick="toggleArticles('variables-html')">Variabili locali e globali</a>
                 <h2>Funzioni</h2>
-                <a href="functions.html#built_in">Built-in</a>
-                <a href="functions.html#define">Definire una funzione</a>
-                <a href="functions.html#recursive">Funzioni recursive</a>
+                <a href="#built_in" onclick="toggleArticles('functions-html')">Built-in</a>
+                <a href="#define" onclick="toggleArticles('functions-html')">Definire una funzione</a>
+                <a href="#recursive" onclick="toggleArticles('functions-html')">Funzioni recursive</a>
             </div>
         </aside>
-        <article>
+        <article id="index-html" style="display: block">
             <div class="content">
                 <div class="row-grid">
                     <div class="inline img-preview">
@@ -98,6 +104,367 @@
                 </div>
             </div>
         </article>
+        <article id="functions-html" style="display: none">
+            <div class="content" id="built_in">
+                <h1>Funzioni built-in di Python</h1>
+                <p>
+                    Python offre moltissime funzioni già fatte che possiamo utilizzare per i nostri programmi,
+                    senza doverle ogni volta ricreare.
+                    Qui una lista delle più utili e comuni:
+                    <ul>
+                        <li>
+                            <h2>Le funzioni I/O (Input/Output)</h2>
+                            In Python sono due le funzioni più utilizzate nei flussi di I/O: <code class="inline-code">input()</code>
+                            e <code class="inline-code">print()</code>.
+                            <p>
+                                La prima permette di creare un flusso di dati che consente all'utente di inserire
+                                dei dati nel programma.
+
+                                <pre><code class="lang-python">
+    input("Inserisci un numero: ")
+    >>> Inserisci un numero: <b>_</b>
+                                    </code>
+                                </pre>
+                            </p>
+                            NB: i dati inseriti in input vengono sempre inseriti come stringhe, a meno che
+                            non si usino funzioni come <code class="inline-code">eval()</code>.
+                            <p>
+                                La seconda permette, invece, di visualizzare delle stringhe in console.
+
+                                <pre><code class="lang-python">
+    print("ciao", nomeInserito, ":D")
+    >>> ciao Christian :D
+                                    </code>
+                                </pre>
+                            </p>
+                            NB: si possono inserire più argomenti all'interno di ogni print: verrà stampato
+                            ogni argomento, uno dopo l'altro, lasciando un carattere vuoto tra ognuno.
+                        </li>
+                        <li>
+                            <h2>Int(), string(), list()...</h2>
+                            <p>
+                                In Python esistono molte funzioni che permettono di tramutare una variabile da
+                                un tipo ad un altro.
+                                Vediamo qualche esempio:
+                            </p>
+                            <ul>
+                                <li>
+                                    <h3>int()</h3>
+                                    Questa funzione permette di trasformare una variabile stringa o float in
+                                    un intero.
+
+                                    <pre><code class="lang-python">
+    stringa = "13"
+    print(int(stringa) + 2)
+    >>> 15
+                                        </code>
+                                    </pre>
+                                </li>
+                                <li>
+                                    <h3>string()</h3>
+                                    Questa funzione, invece, trasforma una variabile di qualsiasi tipo in una
+                                    stringa.
+
+                                    <pre><code class="lang-python">
+    numeroClasse = 3
+    print("Classe:", string(numeroClasse) + "B")
+    >>> Classe: 3B
+                                        </code>
+                                    </pre>
+                                </li>
+                                <li>
+                                    <h3>list()</h3>
+                                    Questa funzione, infine, permette di tramutare in lista una struttura dati
+                                    in sequenza, come un set o una tupla, per esempio.
+
+                                    <pre><code class="lang-python">
+    tupla = ("Lunedì", "Martedì", "Mercoledì")
+    print(list(tupla))
+    >>> list("Lunedì", "Martedì", "Mercoledì")
+                                        </code>
+                                    </pre>
+                                </li>
+                            </ul>
+                            Ci sono molte altre funzioni simili a queste, come <code class="inline-code">
+                            tuple()</code>, <code class="inline-code">float()</code>... le vedrete 
+                            programmando all'occorrenza ;)
+                        </li>
+                        <li>
+                            <h2>len()</h2>
+                            Questa è una funzione che vi tornerà utile spesso, davvero.
+                            Ritorna la quantità di elementi che una sequenza contiene, cioè una qualsiasi
+                            struttura dati che contiene delle variabili, in intero.
+
+                            <pre><code class="lang-python">
+    lista = [1, 2, 3, 4, 5, 6, 7]
+    print(len(lista))
+    >>> 7
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div class="content" id="define">
+                <h1>Definire una funzione</h1>
+                <p>
+                    Bene, adesso vediamo come possiamo noi definire una funzione all'occorrenza.
+                    Per definire una funzione bisogna anteporre al blocco di codice la keyword
+                    <code class="inline-code">def</code>, successivamente, separato con uno spazio, il
+                    nome della funzione, le parentesi con gli argomenti richiesti subito dopo,
+                    "<i>:</i>" e, andando a capo con un'indentazione, 
+                    si può dichiarare ciò che deve eseguire la funzione quando richiamata.
+
+                    <pre><code class="lang-python">
+    def funzione(a, b):
+        return a + b
+    print(funzione(1, 2))
+    >>> 3
+                        </code>
+                    </pre>
+                    NB: per richiamare la funzione, questa dev'essere dichiarata nelle righe precedenti.
+                </p>
+            </div>
+            <div class="content" id="recursive">
+                <h1>Funzioni recursive</h1>
+                <p>
+                    Abbiamo visto nella sezione precedente la keyword <code class="inline-code">return</code>.
+                    Questa, come avrete intuito, dichiara a Python cosa la funzione deve ritornare al resto 
+                    del codice, in quel caso la somma tra i due argomenti immessi come parametri richiesti 
+                    nelle parentesi.
+                </p>
+                <p>
+                    Se nel return della funzione viene richiamata la funzione stessa, si parla di funzione 
+                    "recursive", cioè che la funzione richiama essa stessa all'interno del proprio codice. 
+
+                    <pre><code class="lang-python">
+    def countDown(count = 3):
+        print(count)
+        count -= 1 // diminuisce di 1 ad ogni richiamo
+        if count > 0:
+            countDown(count)
+        else:
+            print("Finished!")
+    countDown()
+    >>> 3
+    >>> 2
+    >>> 1
+    >>> Finished!
+                        </code>
+                    </pre>
+                </p>
+            </div>
+        </article>
+        <article id="variables-html" style="display: none">
+            <div id="variables" class="content">
+                <h1>Tipi di variabili</h1>
+                <p>
+                    In Python ci sono molti tipi di variabili di cui poter usufruire, alcuni
+                    li possiamo ritrovare in altri linguaggi di programmazione, altri sono nativi
+                    di Python.
+                    Per dichiarare una variabile, a differenza degli altri linguaggi, bisogna semplicemente
+                    scrivere il nome della variabile (chiamato 'identificatore') e assegnargli un valore.
+                    <ol>
+                        <li>integer
+                            <pre><code class="lang-python">
+    a = 2
+    altro_int = 5
+                                </code>
+                            </pre>
+                        </li>
+                        <li>float
+                            <pre><code class="lang-python">
+    a = 2.5
+    altro_float = 19.003
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Nativo di Python: string <br>
+                            Possiamo usare sia i singoli apici ' ' che i doppi apici " ", e per definire una 
+                            stringa contenente altri apici bisogna utilizzare o entrambi i tipi (es. i doppi
+                            all'esterno e i singoli all'interno) se sono pochi i casi, o altrimenti usare
+                            ' \" '. Questo backslash è un carattere che viene molto utilizzato in casi come
+                            questi, come per esempio anche nelle RegEx (Regular Expressions, ne parlerò più 
+                            avanti).
+                            <pre><code class="lang-python">
+    stringa = 'La stringa "hola" è lunga 4 caratteri'
+    print(stringa)
+    >>> La stringa "hola" è lunga 4 caratteri
+
+    stringa = "La stringa \"hola\" è lunga 4 caratteri"
+    print(stringa)
+    >>> La stringa "hola" è lunga 4 caratteri
+                                </code>
+                            </pre>
+
+                        </li>
+                        <li>Nativo di Python: list <br>
+                            Una lista è un insieme di elementi di <b>qualsiasi</b> tipo, e
+                            quando bisogna riferirsene bisogna utilizzare le parentesi quadre all'inizio
+                            e alla fine. <br>
+
+                            NB: per accedere direttamente ad un singolo elemento della lista bisogna 
+                            richiamarlo col suo indice, come è scritto nella penultima riga.
+                            <pre><code class="lang-python">
+    myList = [1, "2", [3, 4]]
+    for element in myList:
+        print(element)
+    >>> 1
+    >>> "2"
+    >>> [3, 4]
+    print(myList[1])
+    >>> "2"
+                                </code>
+                            </pre>
+
+                        </li>
+                        <li>Nativo di Python: tuple <br>
+                            Una tupla è come una lista ma le parentesi sono tonde e i suoi elementi sono
+                            <b>immutabili</b> e <b>fissi</b> in numero.
+
+                            <pre><code class="lang-python">
+    myTuple = (1, 0.5, "elemento")
+    myTuple[2] = 5 // questa riga darà errore
+    >>> TypeError: 'tuple' object does not support item assignment
+                                </code>
+                            </pre>
+
+                        </li>
+                        <li>Nativo di Python: dict <br>
+                            Un dizionario è un insieme di <b>coppie</b> di elementi, dove il primo della quale
+                            è la "chiave" e il secondo è il "valore".
+                            Per accedere ad un suo elemento, infatti, dobbiamo usare la dicitura 
+                            'dizionario[chiave] = valore', dove la chiave è solitamente una stringa
+                            che identifica il valore, e il valore può essere di qualsiasi tipo.
+
+                            <pre><code class="lang-python">
+    myDict = {"name": "Mario", "surname": "Rossi", "age": 20}
+    print(myDict[name], myDict[surname])
+    >>> Mario Rossi
+                                </code>
+                            </pre>
+
+                        </li>
+                    </ol>
+                    Infine, ci sono anche altre strutture dati utilizzabili in Python, grazie
+                    alla fiorente community di programmatori che lavorano regolarmente offrendo 
+                    nuovi moduli e nuove librerie agli utenti che scrivono in questo linguaggio 
+                    (queue, stack, ...).
+                </p>
+                <div class="tips">
+                    Ricapitolando...
+                    <table id="tabella">
+                        <caption><h3>Strutture dati native di Python</h3></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">N° elementi fisso</th>
+                                <th scope="col">Tipi di variabili ammessi</th>
+                                <th scope="col">Metodo di richiamo elemento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lista</td>
+                                <td>Numero infinito di elementi</td>
+                                <td>Tutti, anche strutture dati stesse</td>
+                                <td class="code-example">list[indice]</td>
+                            </tr>
+                            <tr>
+                                <td>Tupla</td>
+                                <td>Numero definito di elementi</td>
+                                <td>Tutti, anche strutture dati stesse</td>
+                                <td class="code-example">tuple[indice]</td>
+                            </tr>
+                            <tr>
+                                <td>Dizionario</td>
+                                <td>Numero infinito di elementi (coppie)</td>
+                                <td>Tutti, anche strutture dati stesse, basta che siano organizzati a coppie</td>
+                                <td class="code-example">dict[chiave]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="var_scopes" class="content">
+                <h1>Variabili globali e locali</h1>
+                <p>
+                    In Python, come in altri linguaggi di programmazione, le variabili hanno uno "scope",
+                    cioè possono essere globali o locali.
+                    <ul>
+                        <li>Le variabili globali sono accessibili da ogni parte del codice
+            
+                            <pre><code class="lang-python">
+    var = 5
+    def function():
+        print(var) // dichiarata al di fuori della funzione, ma essendo globale sarà accessibile
+    function()
+    >>> 5
+            
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Le variabili locali, invece, sono accessibili solo nella funzione o classe 
+                            in questione.
+            
+                            <pre><code class="lang-python">
+    def function():
+        var = 20
+    print(var) // la funzione print non riuscirà a trovare nessuna variabile con quel nome
+    >>> NameError: name 'var' is not defined
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </article>
+        <article id="form-html" style="display: none">
+            <div class="content">
+                <div id="form-container">
+                    <div id="form-background">
+                        <img src="img/programmazione_2.jpg" alt="Background" id="image-background">
+                    </div>
+                    <div id="form-content">
+                        <!-- it doesn't really work, but I wanna simulate it works ;) -->
+                        <form onsubmit='return false;'>
+                            <label for="fname"><b>First name</b></label><br>
+                            <input type="text" placeholder="Enter first name" name="fname" id="fname" required
+                             pattern="[a-zA-Z]+" requiredPattern="Sono ammessi solo caratteri alfabetici"><br><br>
+
+                            <label for="lname"><b>Last name</b></label><br>
+                            <input type="text" placeholder="Enter last name" name="lname" id="lname" required
+                             pattern="[a-zA-Z]+" requiredPattern="Sono ammessi solo caratteri alfabetici"><br><br>
+
+                            <label for="telephone"><b>Telephone number</b></label><br>
+                            <input type="number" placeholder="Enter telephone number" name="telephone" 
+                             id="telephone" required><br><br>
+
+                            <label for="email"><b>Email</b></label><br>
+                            <input type="text" placeholder="Enter email" name="email" id="email" required
+                             pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                             requiredPattern="Controlla di aver inserito correttamente la tua email:
+                             dev'esserci un primo gruppo di caratteri qualsiasi, la chiocciola, lettere e/o 
+                             numeri, un punto, e ancora lettere e/o numeri"><br><br>
+
+                            <label for="password"><b>Password</b></label><br>
+                            <input type="password" placeholder="Enter password" name="password" 
+                             id="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(.{8,})"
+                             requiredPattern="Almeno 8 caratteri, almeno una minuscola e una maiuscola, 
+                             almeno un numero e almeno un carattere speciale"><br><br>
+
+                            <button type="submit" onclick='redirectToIndex();'>Submit</button>
+                            <label id="checkbox-label">
+                                <input type="checkbox" checked="checked" name="remember" id="remember">
+                                Remember me
+                            </label><br>
+
+                            <span id="forgot-pwd"><a href="#">Hai dimenticato la password?</a></span>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </article>
     </div>
     <footer>
         <div class="author">
@@ -124,5 +491,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>

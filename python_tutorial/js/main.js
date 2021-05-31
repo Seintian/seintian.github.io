@@ -1,6 +1,7 @@
 var toggle_button = document.getElementById("toggle-dark-mode");
 var menu = document.getElementById("menu");
 var topbar = document.getElementById("topbar");
+var articles = document.getElementsByTagName("article");
 
 /* Replace the dark-mode icon every time, also classes of the body and the topbar */
 function toggleDarkMode() {
@@ -33,5 +34,20 @@ function toggleMenu() {
 
     } else {
         menu.style.display = "block";
+    }
+}
+
+/* TODO:
+    Fare in modo che la pagina del sito sia unica e che i link in realtà eseguano funzioni JS che 
+    visualizzano la "parte di pagina" che si vuole, come se cambiasse pagina.
+    Utilizza index.html
+*/
+function toggleArticles(toggled) {
+    for (var article of articles) {
+        article.style.display = "none";
+    }
+    document.getElementById(toggled).style.display = "block";
+    if (toggled == "form-html") {
+        menu.style.display = "none";
     }
 }
