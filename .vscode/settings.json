@@ -26,6 +26,7 @@
         "l'except",
         "le",
         "lightbox",
+        "lname",
         "longpress",
         "longtarget",
         "matplotlib",
@@ -63,6 +64,9 @@
         "youtube"
     ],
     "cSpell.words": [
-        "asciugatrice"
-    ]
+        "asciugatrice",
+        "datetime",
+        "fname"
+    ],
+    "python.pythonPath": "C:\\Users\\chris\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
 }

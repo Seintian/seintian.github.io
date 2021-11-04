@@ -1,0 +1,148 @@
+:root {
+    --bg-color: rgb(50, 50, 50);
+    --text-color: rgb(200, 200, 200);
+    --fg-color: rgb(40, 125, 20);
+    --a-color: rgb(70, 175, 50);
+
+    font-size: 18px;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(170, 170, 170);
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: flex;
+    padding: 2rem 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    background: var(--bg-color);
+}
+nav #container {
+    display: flex;
+    vertical-align: middle;
+}
+
+aside {
+    flex: 30%;
+}
+
+article {
+    flex: 70%;
+    padding-top: 1rem;
+}
+
+#navbar {
+    position: sticky;
+    top: 5rem;
+    padding-top: 1rem;
+}
+
+input[type = "text"], input[type = "password"],
+input[type = "email"], input[type = "search"] {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid var(--fg-color);
+    color: var(--text-color);
+}
+input:focus {
+    transition: .3s;
+    outline: none;
+    border-bottom-width: 2px;
+    background: rgb(70, 70, 70);
+}
+input[type = "submit"] {
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--fg-color);
+    cursor: pointer;
+}
+input[type = "submit"]:hover {
+    color: rgb(100, 100, 100);
+}
+
+footer {
+    width: 90%;
+    padding: 2rem 5%;
+    display: flex;
+}
+
+ul#systems-list {
+    padding-inline-start: 2ch;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    font-size: 1.2rem;
+}
+ul#systems-list li {
+    line-height: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+}
+
+nav h1 {
+    flex: 1;
+    margin: 0;
+    font-size: 3rem;
+}
+nav #signup-link {
+    margin-right: calc(8ch + 5vw);
+    text-align: right;
+    vertical-align: middle;
+    line-height: 3rem;
+    padding: 0 1rem;
+    border: 3px solid var(--fg-color);
+    transition: .3s;
+}
+nav #signup-link:hover {
+    border-color: rgb(170, 170, 170);
+}
+
+footer #fonti-copyright {
+    flex: 1;
+}
+
+article div {
+    width: 80%;
+    margin: 3rem auto;
+    margin-top: 0; 
+    line-height: 140%;
+}
+div#ideale {
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+}
