@@ -30,6 +30,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 2rem;
 }
 
 input[type = "text"], input[type = "password"],
