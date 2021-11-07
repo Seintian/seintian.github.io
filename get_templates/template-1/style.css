@@ -1,0 +1,73 @@
+:root {
+    --bg-color: rgb(50, 50, 50);
+    --text-color: rgb(200, 200, 200);
+    --fg-color: rgb(40, 125, 20);
+
+    font-size: 18px;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: var(--text-color);
+}
+a:hover {
+    color: rgb(170, 170, 170);
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+nav #container {
+    position: relative;
+}
+
+aside {
+    flex: 30%;
+    padding: 2rem 0;
+}
+article {
+    flex: 70%;
+    padding: 2rem 1rem;
+}
+
+#navbar {
+    position: sticky;
+}
+
+input[type = "text"], input[type = "password"],
+input[type = "email"], input[type = "search"] {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid var(--fg-color);
+    color: var(--text-color);
+}
+input:focus {
+    transition: .3s;
+    outline: none;
+    border-bottom-width: 2px;
+    background: rgb(70, 70, 70);
+}
+
+footer {
+    width: 90%;
+    padding: 2rem 5%;
+}
